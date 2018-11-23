@@ -1,0 +1,25 @@
+From 2a1746c554b5f243c2ff02a1db8bcdae4fdda31f Mon Sep 17 00:00:00 2001
+From: javierjcf <javierjcf@gmail.com>
+Date: Wed, 16 May 2018 10:27:26 +0200
+Subject: [PATCH] [FIX]product: Fixed Key error pricelist
+
+---
+ addons/product/models/product.py | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/addons/product/models/product.py b/addons/product/models/product.py
+index cd28d77..ee7a75e 100644
+--- a/addons/product/models/product.py
++++ b/addons/product/models/product.py
+@@ -520,6 +520,8 @@ class ProductProduct(models.Model):
+     def price_compute(self, price_type, uom=False, currency=False, company=False):
+         # TDE FIXME: delegate to template or not ? fields are reencoded here ...
+         # compatibility about context keys used a bit everywhere in the code
++        if price_type == 'pricelist':
++            price_type = 'pricelist_id'
+         if not uom and self._context.get('uom'):
+             uom = self.env['product.uom'].browse(self._context['uom'])
+         if not currency and self._context.get('currency'):
+-- 
+2.7.4
+

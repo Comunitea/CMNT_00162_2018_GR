@@ -1,0 +1,38 @@
+From 15403d7d005d5e76fa728b882f9405f7bc098670 Mon Sep 17 00:00:00 2001
+From: javierjcf <javierjcf@gmail.com>
+Date: Mon, 2 Jul 2018 18:27:02 +0200
+Subject: [PATCH] [FIX]web: Parche para tener scroll horizontal siempre
+ habilitado
+
+---
+ addons/web/static/lib/bootstrap/css/bootstrap.css | 1 -
+ addons/web/static/lib/bootstrap/less/tables.less  | 1 -
+ 2 files changed, 2 deletions(-)
+
+diff --git a/addons/web/static/lib/bootstrap/css/bootstrap.css b/addons/web/static/lib/bootstrap/css/bootstrap.css
+index 680e7687862..2107a714c05 100644
+--- a/addons/web/static/lib/bootstrap/css/bootstrap.css
++++ b/addons/web/static/lib/bootstrap/css/bootstrap.css
+@@ -2442,7 +2442,6 @@ table th[class*="col-"] {
+ }
+ .table-responsive {
+   min-height: .01%;
+-  overflow-x: auto;
+ }
+ @media screen and (max-width: 767px) {
+   .table-responsive {
+diff --git a/addons/web/static/lib/bootstrap/less/tables.less b/addons/web/static/lib/bootstrap/less/tables.less
+index 2242c036868..f1b07e0156a 100644
+--- a/addons/web/static/lib/bootstrap/less/tables.less
++++ b/addons/web/static/lib/bootstrap/less/tables.less
+@@ -169,7 +169,6 @@ table {
+ // will display normally.
+ 
+ .table-responsive {
+-  overflow-x: auto;
+   min-height: 0.01%; // Workaround for IE9 bug (see https://github.com/twbs/bootstrap/issues/14837)
+ 
+   @media screen and (max-width: @screen-xs-max) {
+-- 
+2.17.1
+
