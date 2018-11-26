@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Website favicon link change (web/views/webclient_templates.xml) -->
+    <template id="web_layout_adds" inherit_id="web.layout">
+        <xpath expr="//link[@rel='shortcut icon']" position="replace">
+            <link type="image/x-icon" rel="shortcut icon" href="/website_adds/static/img/grfavicon.png"/>
+        </xpath>
+    </template>
+
+    <!-- Website logo change (website/views/website_templates.xml) -->
+    <template id="website_layout_logo_show_adds" inherit_id="website.layout_logo_show">
+        <xpath expr="//img" position="attributes">
+            <attribute name="src">/website_adds/static/img/grlogo-lg.png</attribute>
+        </xpath>
+    </template>
+
+</odoo>

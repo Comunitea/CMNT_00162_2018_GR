@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Changes for cart template (website_sale/views/templates.xml) -->
+    <template id="website_sale_cart_adds" inherit_id="website_sale.cart_lines">
+        <xpath expr="//td[@id='td-qty']" position="replace">
+            <td class="text-center" id="td-qty">
+                <input type="text" class="js_quantity form-control quantity" readonly="readonly"
+                       t-att-data-line-id="line.id"
+                       t-att-data-product-id="line.product_id.id"
+                       t-att-value="int(line.product_uom_qty) == line.product_uom_qty and int(line.product_uom_qty) or line.product_uom_qty" />
+            </td>
+        </xpath>
+    </template>
+
+</odoo>

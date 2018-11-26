@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Changes for product template (website_sale/views/templates.xml) -->
+    <template id="website_sale_product_adds" inherit_id="website_sale.product">
+        <xpath expr="//div[@class='col-sm-4']" position="replace"/>
+        <xpath expr="//div[@class='col-sm-3 mb8']" position="replace"/>
+    </template>
+
+    <!-- Changes for price template on the product page -->
+    <template id="website_sale_product_price_adds" inherit_id="website_sale.product_price">
+        <xpath expr="//h4[@class='oe_price_h4 css_editable_mode_hidden']" position="inside">
+            <span> por día</span>
+        </xpath>
+    </template>
+
+</odoo>

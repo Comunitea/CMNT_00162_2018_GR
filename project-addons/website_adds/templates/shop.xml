@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Changes for shop template (website_sale/views/templates.xml) -->
+    <template id="website_sale_products_adds" inherit_id="website_sale.products">
+        <xpath expr="//div[@class='products_pager']/div/t[1]" position="replace"/>
+    </template>
+
+    <!-- Changes for product item template on the shop page -->
+    <template id="website_sale_products_item_adds" inherit_id="website_sale.products_item">
+        <xpath expr="//div[@class='product_price']" position="inside">
+            <span> por día</span>
+        </xpath>
+    </template>
+
+</odoo>
