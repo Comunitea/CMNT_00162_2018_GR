@@ -33,6 +33,7 @@ include/
 *.egg
 upgrade.py
 .idea
+it-projects-llc/
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
