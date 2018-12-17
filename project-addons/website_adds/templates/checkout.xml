@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Changes for OSC main template (website_sale/views/templates.xml) -->
+    <template id="osc_main_template_adds" inherit_id="website_sale_one_step_checkout.osc_onestepcheckout">
+        <xpath expr="//table[@id='cart_products']/thead//th[3]" position="replace">
+            <!--<th width="120">Weeks</th>-->
+        </xpath>
+        <xpath expr="//table[@id='cart_products']/tbody//td[4]" position="replace"/>
+    </template>
+
+</odoo>

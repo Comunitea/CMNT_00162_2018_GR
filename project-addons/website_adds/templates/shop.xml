@@ -9,7 +9,7 @@
     <!-- Changes for product item template on the shop page -->
     <template id="website_sale_products_item_adds" inherit_id="website_sale.products_item">
         <xpath expr="//div[@class='product_price']" position="inside">
-            <span> por día</span>
+            <span> por semana</span>
         </xpath>
     </template>
 

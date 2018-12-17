@@ -13,6 +13,7 @@
         'crm',
         'payment_redsys',
         'sale',
+        'sale_rental',
         'stock',
         'theme_bootswatch',
         'web_sheet_full_width',
@@ -31,6 +32,7 @@
     ],
     'data': [
         'templates/cart.xml',
+        'templates/checkout.xml',
         'templates/contactus.xml',
         'templates/footer.xml',
         'templates/header.xml',
