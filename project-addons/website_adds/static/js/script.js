@@ -46,7 +46,7 @@ $(document).ready(function(){
             /* price and weeks quantity calculation */
 
             var price_by_week  = $('.oe_price span.oe_currency_value').html()
-                quantity = weeks
+                quantity = parseInt(weeks)
                 price_total = 0
 
             price_by_week = parseFloat(price_by_week.replace(',', '.'));

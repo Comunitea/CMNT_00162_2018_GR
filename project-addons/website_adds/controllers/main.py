@@ -20,6 +20,7 @@ class NewUpdateCart(WebsiteSale):
             'start_date': kw['start_date'],
             'end_date': kw['end_date'],
             'number_of_days': kw['number_of_days'],
+            'new_qty': add_qty,
         })
 
         request.env.context = values
@@ -47,11 +48,11 @@ class NewSaleOrder(SaleOrder):
             if order_line:
                 pu = self.env['account.tax']._fix_tax_included_price_company(pu, product.taxes_id,
                                                                              order_line[0].tax_id, self.company_id)
-                qty = qty - order_line.product_uom_qty
+                # qty = qty - order_line.product_uom_qty
 
         return {
             'product_id': product_id,
-            'product_uom_qty': qty,
+            'product_uom_qty': product_context['new_qty'],
             'order_id': order_id,
             'product_uom': product.uom_id.id,
             'price_unit': pu,
