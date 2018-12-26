@@ -46,21 +46,23 @@
                     </h2>
                 </div>
                 <div class="col-md-4">
-                    <h4>Nuestros servicios</h4>
+                    <h4>Game Ready</h4>
                     <ul class="list-unstyled" id="products">
-                        <li><a href="/shop">Tienda</a></li>
-                        <li><a href="/page/informacion">Información</a></li>
-                        <li><a href="/page/aboutus">Sobre nosotros</a></li>
-                        <li><a href="/page/contactus">Contáctenos</a></li>
+                        <li><a href="/page/grpro-2-1">Unidad GRPro 2.1</a></li>
+                        <li><a href="/page/bandas-game-ready">Bandas</a></li>
+                        <li><a href="/page/game-ready-accessories">Accessories</a></li>
+                        <li><a href="/page/ayuda">Guías y manuales</a></li>
+                        <li><a href="/page/informacion">Información clínica</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3">
-                    <h4>Cuenta en linea</h4>
+                    <h4>Mi cuenta</h4>
                     <ul class="list-unstyled" id="products">
-                        <li><a href="/my/home">Mi cuenta</a></li>
                         <li><a href="/shop/cart">Mi carrito</a></li>
+                        <li><a href="/my/quotes">Mis presupuestos</a></li>
                         <li><a href="/my/orders">Mis pedidos</a></li>
-                        <li><a href="/my/invoices">Mis facturas </a></li>
+                        <li><a href="/my/invoices">Mis facturas</a></li>
+                        <li><a href="/my/account">Datos personales</a></li>
                     </ul>
                 </div>
             </div>

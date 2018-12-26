@@ -48,7 +48,6 @@ class NewSaleOrder(SaleOrder):
             if order_line:
                 pu = self.env['account.tax']._fix_tax_included_price_company(pu, product.taxes_id,
                                                                              order_line[0].tax_id, self.company_id)
-                # qty = qty - order_line.product_uom_qty
 
         return {
             'product_id': product_id,
