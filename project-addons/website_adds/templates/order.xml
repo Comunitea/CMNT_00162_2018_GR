@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <!-- Add Start and End date lines to order page -->
+    <template id="webste_portal_order_add" inherit_id="website_portal_sale.orders_followup">
+        <xpath expr="//div[@class='panel-body']/div[3]/div[@class='col-md-6']" position="replace">
+            <div class="col-md-4">
+                <strong>Product</strong>
+            </div>
+            <div class="col-md-3">
+                <strong>Start / End Date</strong>
+            </div>
+        </xpath>
+        <xpath expr="//div[@class='panel-body']/div[3]/div[@class='col-md-2 text-right'][2]" position="attributes">
+            <attribute name="class">col-md-1 text-right</attribute>
+        </xpath>
+        <xpath expr="//div[@class='panel-body']//div[@id='product_name']" position="attributes">
+            <attribute name="class">col-md-3</attribute>
+        </xpath>
+        <xpath expr="//div[@class='row orders_vertical_align']//div[@id='product_name']" position="after">
+            <div class="col-md-3">
+                <t t-if="ol.start_date and ol.end_date">
+                    <span t-esc="ol.start_date"/> /
+                    <span t-esc="ol.end_date"/>
+                </t>
+            </div>
+        </xpath>
+        <xpath expr="//div[@class='row orders_vertical_align']//div[@class='col-md-2 text-right'][2]" position="attributes">
+            <attribute name="class">col-md-1 text-right</attribute>
+        </xpath>
+    </template>
+
+    <!-- Add Start and End date lines to order confirmation page -->
+    <template id="website_sale_confirmation_add" inherit_id="website_sale.confirmation">
+        <xpath expr="//div[@class='oe_cart']/table[@class='table'][1]/thead/tr/th[1]" position="after">
+            <th>Start / End Date</th>
+        </xpath>
+        <xpath expr="//div[@class='oe_cart']/table[@class='table'][1]/tbody/tr/td[1]" position="after">
+            <td>
+                <div t-if="line.start_date and line.end_date">
+                    <span t-esc="line.start_date"/> /
+                    <span t-esc="line.end_date"/>
+                </div>
+            </td>
+        </xpath>
+        <xpath expr="//div[@id='quote_qty']/span[@t-field='line.product_uom']" position="replace"/>
+        <xpath expr="//div[@class='oe_cart']/table[@class='table'][1]//tfooter/tr[1]/td[1]" position="attributes">
+            <attribute name="colspan">3</attribute>
+        </xpath>
+        <xpath expr="//div[@class='oe_cart']/table[@class='table'][1]//tfooter/tr[2]/td[1]" position="attributes">
+            <attribute name="colspan">3</attribute>
+        </xpath>
+        <xpath expr="//div[@class='oe_cart']/table[@class='table'][1]//tfooter/tr[3]/td[1]" position="attributes">
+            <attribute name="colspan">3</attribute>
+        </xpath>
+    </template>
+
+    <!-- Add Start and End date lines to PDF report -->
+    <template id="sale_report_saleorder_document_add" inherit_id="sale.report_saleorder_document">
+        <xpath expr="//table[1]/thead/tr/th[1]" position="after">
+            <th class="text-right">Start / End Date</th>
+        </xpath>
+        <xpath expr="//table[1]/tbody/t[@t-foreach='page']/t[2]/tr/td[1]" position="after">
+            <td class="text-right">
+                <div t-if="l.start_date and l.end_date">
+                    <span t-esc="l.start_date"/> /
+                    <span t-esc="l.end_date"/>
+                </div>
+            </td>
+        </xpath>
+    </template>
+
+</odoo>

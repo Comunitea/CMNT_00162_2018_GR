@@ -38,6 +38,7 @@
         'templates/header.xml',
         'templates/product.xml',
         'templates/shop.xml',
+        'templates/order.xml',
         'templates/views.xml'
     ],
     'images': [
