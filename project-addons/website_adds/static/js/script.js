@@ -21,13 +21,13 @@ $(document).ready(function(){
     });
 
     /* add menu cart item active class*/
-    $('.nav .fa-shopping-cart').closest('li').addClass('always_hover');
+//    $('.nav .fa-shopping-cart').closest('li').addClass('always_hover');
 
     /* select rent dates section */
     function calcDates(){
 
         var start_date = $('input[name="start-date"]').val()
-            weeks = $('select[name="week-duration"] option').filter(':selected').val()
+        var weeks = $('select[name="week-duration"] option').filter(':selected').val()
 
         /* "start date" and "end date" calculation */
         if(start_date && weeks){
@@ -80,6 +80,19 @@ $(document).ready(function(){
         }
     }
     $('input[name="start-date"]').on('change', function(){
+        $('#date_info').hide();
+        var current_date = new Date();
+        current_date.setHours(0);
+        current_date.setMinutes(0);
+        current_date.setMilliseconds(0);
+        var start_date = new Date($('input[name="start-date"]').val());
+        if (start_date.getTime() < current_date.getTime()){
+            $('a#add_to_cart').addClass('hidden');
+            $('#date_error').removeClass('hidden');
+        } else {
+            $('a#add_to_cart').removeClass('hidden');
+            $('#date_error').addClass('hidden');
+        }
         calcDates();
     });
     /*$('input[name="end-date"]').on('change', function(){

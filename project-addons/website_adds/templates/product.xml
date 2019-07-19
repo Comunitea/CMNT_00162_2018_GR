@@ -3,39 +3,60 @@
 
     <!-- Changes for product template (website_sale/views/templates.xml) -->
     <template id="website_sale_product_adds" inherit_id="website_sale.product">
+
+        <!-- Delete breadcrumbs -->
         <xpath expr="//div[@class='col-sm-4']" position="replace"/>
+
+        <!-- Delete search box -->
         <xpath expr="//div[@class='col-sm-3 mb8']" position="replace"/>
-        <xpath expr="//div[@id='product_details']//a[@id='add_to_cart']" position="before">
+
+        <!-- Delete guarantee text -->
+        <xpath expr="//div[@id='product_details']//hr[last()]" position="replace"/>
+        <xpath expr="//div[@id='product_details']/p[last()]" position="replace"/>
+
+        <!-- Including dates form -->
+        <xpath expr="//div[@id='product_details']//input[@class='product_id']" position="before">
             <div class="form-control-dates">
-                <label for="start-date">De</label>
-                <input type="date"
-                       name="start-date"
-                       id="start-date"
-                       required="required"
-                       min="2018-12-01"
-                       max="2019-01-31"/>
-                <label for="week-duration">por</label>
-                <select name="week-duration" id="week-duration">
-                    <option value="1">1 semana</option>
-                    <option value="2">2 semanas</option>
-                    <option value="3">3 semanas</option>
-                    <option value="4">4 semanas</option>
-                </select>
-                <label for="end-date">a</label>
-                <input type="date"
-                       name="end-date"
-                       id="end-date"
-                       readonly="readonly"/>
+                <div class="form-group">
+                    <label for="start-date">Fecha inicio alquiler</label>
+                    <input class="form-control"
+                           type="date"
+                           name="start-date"
+                           id="start-date"
+                           required="required"
+                           t-att-min="datetime.datetime.now().strftime('%Y-%m-%d')"/>
+                </div>
+                <div class="form-group">
+                    <label for="week-duration">Duración</label>
+                    <select name="week-duration" id="week-duration" class="form-control">
+                        <option value="1">1 semana</option>
+                        <option value="2">2 semanas</option>
+                        <option value="3">3 semanas</option>
+                        <option value="4">4 semanas</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="end-date">Fecha fin alquiler</label>
+                    <input class="form-control"
+                           type="date"
+                           name="end-date"
+                           id="end-date"
+                           readonly="readonly"/>
+                </div>
             </div>
-            <!--<div class="form-control-dates-subtotal">
-                <label>
-                    Total:
-                    <input name="total-date" id="total-date" type="text" size="2" readonly="readonly" value="0"/>
-                    semana(s)
-                </label>
-            </div>-->
+        </xpath>
+    </template>
+
+    <!-- Changes for price template on the product page -->
+    <template id="website_sale_product_price_adds" inherit_id="website_sale.product_price">
+        <xpath expr="//h4[@class='oe_price_h4 css_editable_mode_hidden']//b[@class='oe_price']" position="replace">
+            <span><strong>Precio por semana: </strong></span>
+            <span class="oe_price" style="white-space: nowrap;" t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
+            <br/>
+        </xpath>
+        <xpath expr="//h4[@class='oe_price_h4 css_editable_mode_hidden']" position="after">
             <div class="form-control-dates-total">
-                <h4>Total: <span class="dates-total-price"/> €</h4>
+                <h4 class="mb32"><strong>Precio final: </strong><span class="dates-total-price"/> €</h4>
             </div>
             <div class="form-control-dates-quantity">
                 <input name="add_qty" type="hidden"/>
@@ -43,13 +64,18 @@
                 <input name="start_date" type="hidden"/>
                 <input name="end_date" type="hidden"/>
             </div>
-        </xpath>
-    </template>
-
-    <!-- Changes for price template on the product page -->
-    <template id="website_sale_product_price_adds" inherit_id="website_sale.product_price">
-        <xpath expr="//h4[@class='oe_price_h4 css_editable_mode_hidden']" position="inside">
-            <span> por semana</span>
+            <div id="date_info" class="alert alert-info alert-dismissible" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><![CDATA[&times;]]></span>
+                </button>
+                Selecciona una fecha, por favor.
+            </div>
+            <div id="date_error" class="alert alert-danger alert-dismissible hidden" role="alert">
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true"><![CDATA[&times;]]></span>
+                </button>
+                Fecha no disponible. Selecciona otra.
+            </div>
         </xpath>
     </template>
 

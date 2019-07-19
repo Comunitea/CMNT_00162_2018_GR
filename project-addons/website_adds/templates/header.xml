@@ -15,4 +15,13 @@
         </xpath>
     </template>
 
+    <template id="website_sale_header" name="Header Shop My Cart Link without text" inherit_id="website_sale.header">
+        <xpath expr="//header//ul[@id='top_menu']//a[@href='/shop/cart']" position="replace">
+            <a href="/shop/cart">
+                <i class="fa fa-shopping-cart"></i>
+                <sup t-attf-class="my_cart_quantity label label-primary" t-esc="website_sale_order and website_sale_order.cart_quantity or ''" />
+            </a>
+        </xpath>
+    </template>
+
 </odoo>

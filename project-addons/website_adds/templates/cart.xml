@@ -31,7 +31,7 @@
             <td class="text-center" id="td-start-date">
                 <span t-if="line.start_date" t-field="line.start_date" t-options='{"widget": "date"}'/>
             </td>
-            <td class="text-center" id="td-start-date">
+            <td class="text-center" id="td-end-date">
                 <span t-if="line.end_date" t-field="line.end_date" t-options='{"widget": "date"}'/>
             </td>
         </xpath>
