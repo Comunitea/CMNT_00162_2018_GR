@@ -27,7 +27,6 @@
         'website_sale_require_login',
         'website_sale_one_step_checkout',
         'website_sale_one_step_checkout_delivery',
-        'website_sale_one_step_checkout_charge_payment_fee',
     ],
     'data': [
         'data/menu_data.xml',
