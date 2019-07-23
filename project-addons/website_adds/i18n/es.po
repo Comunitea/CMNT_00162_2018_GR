@@ -222,3 +222,337 @@ msgstr "https://www.instagram.com/company_odoo"
 msgid "website.config.settings"
 msgstr "website.config.settings"
 
+#. module: payment
+#: model:payment.acquirer,pre_msg:payment.payment_acquirer_transfer
+msgid "Transfer information will be provided after choosing the payment method."
+msgstr "La información de la transacción será provista después de seleccionar un método de pago."
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "(processing fees apply)"
+msgstr "(procesando cargos adicionales)"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "(processing fees\n"
+"                            apply)"
+msgstr "(procesando cargos\n"
+"                            adicionales)"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.update_displayed_shippings
+msgid "<i class=\"fa fa-plus-square\" aria-hidden=\"true\"/> Add an address"
+msgstr "<i class=\"fa fa-plus-square\" aria-hidden=\"true\"/> Añada una dirección"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "<span class=\"fa fa-2x fa-credit-card\"/>\n"
+"                                                Saved Cards"
+msgstr "<span class=\"fa fa-2x fa-credit-card\"/>\n"
+"                                                Trajetas guardadas"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "<span class=\"fa fa-2x fa-credit-card\"/>\n"
+"                        Saved Cards"
+msgstr "<span class=\"fa fa-2x fa-credit-card\"/>\n"
+"                        Trajetas guardadas"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "<span class=\"fa fa-arrow-right\"/>\n"
+"                      change"
+msgstr "<span class=\"fa fa-arrow-right\"/>\n"
+"                      cambiar"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "<span>Confirm </span><span class=\"fa fa-long-arrow-right\"/>"
+msgstr "<span>Confirmar </span><span class=\"fa fa-long-arrow-right\"/>"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.checkout_new_address_modal
+msgid "<span>Confirm</span>\n"
+"            <span class=\"fa fa-long-arrow-right\"/>"
+msgstr "<span>Confirmar</span>\n"
+"            <span class=\"fa fa-long-arrow-right\"/>"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
+msgid "Address"
+msgstr "Dirección"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
+msgid "Billing Address"
+msgstr "Dirección de Facturación"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
+msgid "Billing Information"
+msgstr "Información de Facturación"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
+#: code:addons/website_sale_one_step_checkout/controllers/main.py:0
+msgid "Shipping Address"
+msgstr "Dirección de Envío"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.view_website_config_settings_bd_inherit
+msgid "Checkout"
+msgstr "Checkout"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "City"
+msgstr "Ciudad"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Close"
+msgstr "Cerrar"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "Company Name"
+msgstr "Nombre Empresa"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Confirm Order <span class=\"fa fa-long-arrow-right\"/>"
+msgstr "Confirmación Pedido<span class=\"fa fa-long-arrow-right\"/>"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Confirm Order\n"
+"                          <span class=\"fa fa-long-arrow-right\"/>"
+msgstr "Confirmación Pedido\n"
+"                          <span class=\"fa fa-long-arrow-right\"/>"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "Country"
+msgstr "País"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "Country..."
+msgstr "País..."
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "Email"
+msgstr "Email"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Informationen"
+msgstr "Información"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "Name"
+msgstr "Nombre"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Pay Now\n"
+"                          <span class=\"fa fa-long-arrow-right\"/>"
+msgstr "Pagar Ahora\n"
+"                          <span class=\"fa fa-long-arrow-right\"/>"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Payment Method"
+msgstr "Método de Pago"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "Phone"
+msgstr "Teléfono"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Price"
+msgstr "Precio"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Product"
+msgstr "Producto"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Quantity"
+msgstr "Cantidad"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Review Order"
+msgstr "Revisar Pedido"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Save my payment data"
+msgstr "Guardar mis datos de pago"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
+msgid "Shop - Checkout"
+msgstr "Tienda - Checkout"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
+msgid "Sign in"
+msgstr "Registrarse"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "State / Province"
+msgstr "Provincia"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "State / Province..."
+msgstr "Provincia"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "Street <span class=\"hidden-xs\"> and Number</span>"
+msgstr "Calle <span class=\"hidden-xs\"> y Número</span>"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "Street\n"
+"            <span class=\"hidden-xs\">and Number</span>"
+msgstr "Calle\n"
+"            <span class=\"hidden-xs\">y Número</span>"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "TIN / VAT"
+msgstr "IVA"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.model.fields,field_description:website_sale_one_step_checkout.field_website_config_settings_use_osc
+#: model:ir.model.fields,field_description:website_sale_one_step_checkout.field_website_use_osc
+msgid "Use OSC"
+msgstr "Usar OSC (Checkout en un paso)"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.model,name:website_sale_one_step_checkout.model_website
+msgid "Website"
+msgstr "Sitio Web"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
+msgid "Zip Code"
+msgstr "Cod. Postal"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
+msgid "or"
+msgstr "o"
+
+#. module: website_sale_one_step_checkout_delivery
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout_delivery.payment_delivery
+msgid "Delivery Method"
+msgstr "Método de Envío"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
+msgid "<span/>\n"
+"                        Ship to this address"
+msgstr "<span/>\n"
+"                        Enviar a esta dirección"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
+msgid "<span/>\n"
+"                      Checkout as guest"
+msgstr "<span/>\n"
+"                      Comprar como invitado"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
+msgid "<span/>\n"
+"                      I already have an\n"
+"                      Account"
+msgstr "<span/>\n"
+"                      Ya tengo una\n"
+"                      cuenta"
+
+#. module: website_sale_one_step_checkout
+#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
+msgid "<i class=\"fa fa-plus-square\" aria-hidden=\"true\"/>\n"
+"                  Add an address"
+msgstr "<i class=\"fa fa-plus-square\" aria-hidden=\"true\"/>\n"
+"                  Añadir una dirección"
+
+#. module: payment_redsys
+#: model:ir.ui.view,arch_db:payment_redsys.order
+msgid "<i class=\"fa fa-file-pdf-o\"/> Order"
+msgstr "<i class=\"fa fa-file-pdf-o\"/> Pedido"
+
+
+#. module: payment_redsys
+#: model:payment.acquirer,cancel_msg:payment_redsys.payment_acquirer_redsys
+msgid "<i><font style=\"font-size: 14px;\">Cancel, Your payment has been cancelled.</font></i>"
+msgstr "<i><font style=\"font-size: 14px;\">Cancelado, su pago ha sido cancelado.</font></i>"
+
+#. module: payment_redsys
+#: model:payment.acquirer,done_msg:payment_redsys.payment_acquirer_redsys
+msgid "<i><font style=\"font-size: 14px;\">Done, Your online payment has been successfully processed. Thank you for your order.</font></i>"
+msgstr "<i><font style=\"font-size: 14px;\">Hacho, su pago ha sido realizado correctamente. Gracias por su pedido.</font></i>"
+
+#. module: payment_redsys
+#: model:payment.acquirer,error_msg:payment_redsys.payment_acquirer_redsys
+msgid "<i><font style=\"font-size: 14px;\">Error, Please be aware that an error occurred during the transaction. The order has been confirmed but will not be paid. Do not hesitate to contact us if you have any questions on the status of your order.</font></i>"
+msgstr "<i><font style=\"font-size: 14px;\">Error, ha ocurrido un error durante la transacción. El pedido ha sido confirmado pero no ha sido pagado. No dude en ponerse en contacto con nosotros para saber el estado de su pedido.</font></i>"
+
+#. module: payment_redsys
+#: model:payment.acquirer,pending_msg:payment_redsys.payment_acquirer_redsys
+msgid "<i><font style=\"font-size: 14px;\">Pending, Your online payment has been successfully processed. But your order is not validated yet.</font></i>"
+msgstr "<i><font style=\"font-size: 14px;\">Pendiente, su pago ha sido realizado correctmente pero su pedido todavía no ha sido validado.</font></i>"
+
+#. module: payment_redsys
+#: model:ir.ui.view,arch_db:payment_redsys.order
+msgid "<strong>Discount (%)</strong>"
+msgstr "<strong>Descuento (%)</strong>"
+
+#. module: payment_redsys
+#: model:ir.ui.view,arch_db:payment_redsys.redsys_result_ko
+msgid "En error ocurred. <br/>Please contact with us and inform you about your order."
+msgstr "Ha ocurrido un error. <br/>Por favor, contacte con nosotros y le informaremos sobre su pedido."
+
+#. module: payment_redsys
+#: code:addons/payment_redsys/models/redsys.py:330
+#, python-format
+msgid "Redsys: feedback error %s (%s)"
+msgstr "Redsys: información error %s (%s)"
+
+#. module: payment_redsys
+#: model:ir.ui.view,arch_db:payment_redsys.redsys_result_ok
+msgid "Thanks for you order. <br/>We will inform you of your order status"
+msgstr "Gracias por su pedido. <br/>Le informaremos sobre el estado de su pedido"
+
+#. module: payment_redsys
+#: model:payment.acquirer,pre_msg:payment_redsys.payment_acquirer_redsys
+msgid "You will be redirected to the Redsys payment gateway after clicking on the payment button."
+msgstr "Será redireccionado a la plataforma de pago Redsys después de pulsar el botón de pago."
