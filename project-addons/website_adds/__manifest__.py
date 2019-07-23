@@ -30,6 +30,7 @@
         'website_sale_one_step_checkout_charge_payment_fee',
     ],
     'data': [
+        'data/menu_data.xml',
         'templates/cart.xml',
         'templates/checkout.xml',
         'templates/contactus.xml',

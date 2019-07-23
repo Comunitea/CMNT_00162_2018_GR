@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+
+    <delete id="website_sale.menu_shop" model="website.menu"/>
+    <delete id="website.menu_homepage" model="website.menu"/>
+
+</odoo>
