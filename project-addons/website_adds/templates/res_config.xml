@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="website_settings_add_instagam" model="ir.ui.view">
+            <field name="name">website.settings.add.instagam.form</field>
+            <field name="model">website.config.settings</field>
+            <field name="inherit_id" ref="website.view_website_config_settings"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='social_googleplus']" position="after">
+                    <field name="social_instagram" placeholder="https://www.instagram.com/company_odoo"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="website_settings_add_domain" model="ir.ui.view">
+            <field name="name">website.settings.add.domain.form</field>
+            <field name="model">website.config.settings</field>
+            <field name="inherit_id" ref="website.view_website_config_settings"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='website_name']" position="after">
+                    <field name="domain"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

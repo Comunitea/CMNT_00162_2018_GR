@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# © 2018 Comunitea
+# © 2019 Comunitea
 # Ruben Seijas <ruben@comunitea.com> - Pavel Smirnov <pavel@comunitea.com>
 # License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 {
@@ -21,12 +21,13 @@
         'website_crm_recaptcha',
         'website_form_recaptcha',
         'website_legal_page',
+        'website_signup_legal_page_required',
         'website_sale',
         'website_sale_filter_countries',
+        'website_sale_require_login',
         'website_sale_one_step_checkout',
         'website_sale_one_step_checkout_delivery',
-        'website_sale_require_login',
-        'website_signup_legal_page_required'
+        'website_sale_one_step_checkout_charge_payment_fee',
     ],
     'data': [
         'templates/cart.xml',
@@ -37,7 +38,8 @@
         'templates/product.xml',
         'templates/shop.xml',
         'templates/order.xml',
-        'templates/views.xml'
+        'templates/views.xml',
+        'templates/res_config.xml',
     ],
     'images': [
         'static/description/icon.png'
