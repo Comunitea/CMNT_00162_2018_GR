@@ -1,0 +1,224 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+#	* website_adds
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 10.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-07-23 11:29+0000\n"
+"PO-Revision-Date: 2019-07-23 11:29+0000\n"
+"Last-Translator: <>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
+msgid "1 semana"
+msgstr "1 semana"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
+msgid "2 semanas"
+msgstr "2 semanas"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
+msgid "3 semanas"
+msgstr "3 semanas"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
+msgid "4 semanas"
+msgstr "4 semanas"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_price_adds
+msgid "<span aria-hidden=\"true\">&amp;times;</span>"
+msgstr "<span aria-hidden=\"true\">&amp;times;</span>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_products_item_adds
+msgid "<span> por semana</span>"
+msgstr "<span> por semana</span>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_price_adds
+msgid "<span><strong>Precio por semana: </strong></span>"
+msgstr "<span><strong>Precio por semana: </strong></span>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_price_adds
+msgid "<strong>Precio final: </strong><span class=\"dates-total-price\"/> €"
+msgstr "<strong>Precio final: </strong><span class=\"dates-total-price\"/> €"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.webste_portal_order_add
+msgid "<strong>Product</strong>"
+msgstr "<strong>Producto</strong>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.webste_portal_order_add
+msgid "<strong>Start / End Date</strong>"
+msgstr "<strong>Fecha Inicio / Fin</strong>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Accessories"
+msgstr "Accesorios"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Bandas"
+msgstr "Bandas"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Contactar con nosotros"
+msgstr "Contactar con nosotros"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Datos personales"
+msgstr "Datos personales"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
+msgid "Duración"
+msgstr "Duración"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
+msgid "End date"
+msgstr "Fecha fin"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
+msgid "Fecha fin alquiler"
+msgstr "Fecha fin alquiler"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
+msgid "Fecha inicio alquiler"
+msgstr "Fecha inicio alquiler"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_price_adds
+msgid "Fecha no disponible. Selecciona otra."
+msgstr "Fecha no disponible. Selecciona otra."
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Game Ready"
+msgstr "Game Ready"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Guías y manuales"
+msgstr "Guías y manuales"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Información clínica"
+msgstr "Información clínica"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_website_config_settings_social_instagram
+#: model:ir.model.fields,field_description:website_adds.field_website_social_instagram
+msgid "Instagram Account"
+msgstr "Cuenta Instagram"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Mi carrito"
+msgstr "Mi carrito"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Mi cuenta"
+msgstr "Mi cuenta"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Mis facturas"
+msgstr "Mis facturas"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Mis pedidos"
+msgstr "Mis pedidos"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Mis presupuestos"
+msgstr "Mis presupuestos"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
+msgid "Product"
+msgstr "Producto"
+
+#. module: website_adds
+#: model:ir.model,name:website_adds.model_sale_order
+msgid "Sales Order"
+msgstr "Pedido de venta"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_product_price_adds
+msgid "Selecciona una fecha, por favor."
+msgstr "Selecciona una fecha, por favor."
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+#: model:ir.ui.view,arch_db:website_adds.website_sale_confirmation_add
+msgid "Start / End Date"
+msgstr "Fecha Inicio / Fin"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
+msgid "Start date"
+msgstr "Fecha Inicio"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
+msgid "Subtotal"
+msgstr "Subtotal"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
+msgid "Unidad GRPro 2.1"
+msgstr "Unidad GRPro 2.1"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_popup_adds
+msgid "View Cart"
+msgstr "Ver Carrito"
+
+#. module: website_adds
+#: model:ir.model,name:website_adds.model_website
+msgid "Website"
+msgstr "Sitio web"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_website_config_settings_domain
+msgid "Website Domain"
+msgstr "Dominio de la página web"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
+msgid "Weeks"
+msgstr "Weeks"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_settings_add_instagam
+msgid "https://www.instagram.com/company_odoo"
+msgstr "https://www.instagram.com/company_odoo"
+
+#. module: website_adds
+#: model:ir.model,name:website_adds.model_website_config_settings
+msgid "website.config.settings"
+msgstr "website.config.settings"
+
