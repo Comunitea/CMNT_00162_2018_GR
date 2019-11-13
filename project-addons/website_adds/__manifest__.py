@@ -40,6 +40,7 @@
         'templates/order.xml',
         'templates/views.xml',
         'templates/res_config.xml',
+        'views/product_pricelist_views.xml',
     ],
     'images': [
         'static/description/icon.png'

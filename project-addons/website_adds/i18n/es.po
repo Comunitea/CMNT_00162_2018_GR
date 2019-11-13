@@ -210,7 +210,7 @@ msgstr "Dominio de la página web"
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
 msgid "Weeks"
-msgstr "Weeks"
+msgstr "Semanas"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_settings_add_instagam
@@ -556,3 +556,32 @@ msgstr "Gracias por su pedido. <br/>Le informaremos sobre el estado de su pedido
 #: model:payment.acquirer,pre_msg:payment_redsys.payment_acquirer_redsys
 msgid "You will be redirected to the Redsys payment gateway after clicking on the payment button."
 msgstr "Será redireccionado a la plataforma de pago Redsys después de pulsar el botón de pago."
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_product_pricelist_item_website_name
+msgid "Website Selector Name"
+msgstr "Nombre Selector Sitio Web"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_product_pricelist_item_selectable
+msgid "Website Selectable"
+msgstr "Seleccionable en Sitio web"
+
+#. module: website_adds
+#: model:ir.model.fields,help:website_adds.field_product_pricelist_item_website_name
+msgid "Name for website selector"
+msgstr "Nombre para mostrar en el selector del sitio web"
+
+#. module: website_adds
+#: model:ir.model.fields,help:website_adds.field_product_pricelist_item_selectable
+msgid "If checked, it will be selectable into the website selector."
+msgstr "Si está seleccionado, será visible en el selector del sitio web."
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_one_column
+msgid "<span class=\"fa fa-long-arrow-left\"/>\n"
+"                    <span class=\"hidden-xs\">Continue Shopping</span>\n"
+"                    <span class=\"visible-xs-inline\">Continue</span>"
+msgstr "<span class=\"fa fa-long-arrow-left\"/>\n"
+"                    <span class=\"hidden-xs\">Continuar Comprando</span>\n"
+"                    <span class=\"visible-xs-inline\">Continuar</span>"

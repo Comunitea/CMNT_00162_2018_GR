@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="rental_product_pricelist_item_tree_view" model="ir.ui.view">
+            <field name="name">rental.product.pricelist.item.tree</field>
+            <field name="model">product.pricelist.item</field>
+            <field name="inherit_id" ref="product.product_pricelist_item_tree_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='name']" position="after">
+                    <field name="website_name"/>
+                    <field name="selectable"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="rental_product_pricelist_item_form_view" model="ir.ui.view">
+            <field name="name">rental.product.pricelist.item.form</field>
+            <field name="model">product.pricelist.item</field>
+            <field name="inherit_id" ref="product.product_pricelist_item_form_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='date_end']" position="after">
+                    <field name="website_name"/>
+                    <field name="selectable"/>
+                </xpath>
+            </field>
+        </record>
+
+        <record id="rental_product_pricelist_view" model="ir.ui.view">
+            <field name="name">rental.product.pricelist.form</field>
+            <field name="model">product.pricelist</field>
+            <field name="inherit_id" ref="product.product_pricelist_view"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='min_quantity']" position="before">
+                    <field name="website_name"/>
+                    <field name="selectable"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>

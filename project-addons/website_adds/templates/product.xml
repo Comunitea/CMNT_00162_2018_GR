@@ -29,10 +29,9 @@
                 <div class="form-group">
                     <label for="week-duration">Duración</label>
                     <select name="week-duration" id="week-duration" class="form-control">
-                        <option value="1">1 semana</option>
-                        <option value="2">2 semanas</option>
-                        <option value="3">3 semanas</option>
-                        <option value="4">4 semanas</option>
+                        <t t-foreach="request.website.get_current_pricelist().item_ids.sorted(key=lambda x: x.min_quantity)" t-as="item_id">
+                            <option t-att-value="'%s-%s' % (item_id.min_quantity, item_id.price)" t-if="item_id.selectable"><span t-esc="item_id.website_name"/></option>
+                        </t>
                     </select>
                 </div>
                 <div class="form-group">
@@ -50,13 +49,12 @@
     <!-- Changes for price template on the product page -->
     <template id="website_sale_product_price_adds" inherit_id="website_sale.product_price">
         <xpath expr="//h4[@class='oe_price_h4 css_editable_mode_hidden']//b[@class='oe_price']" position="replace">
-            <span><strong>Precio por semana: </strong></span>
-            <span class="oe_price" style="white-space: nowrap;" t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
-            <br/>
+            <span class="form-control-dates-select"><strong>Precio: </strong> Seleccione inicio y duración.</span>
+            <span class="oe_price hidden" style="white-space: nowrap;" t-esc="product.website_price" t-options="{'widget': 'monetary', 'display_currency': website.currency_id}"/>
         </xpath>
         <xpath expr="//h4[@class='oe_price_h4 css_editable_mode_hidden']" position="after">
             <div class="form-control-dates-total">
-                <h4 class="mb32"><strong>Precio final: </strong><span class="dates-total-price"/> €</h4>
+                <h4 class="mb32"><strong>Precio: </strong><span class="dates-total-price"/> €</h4>
             </div>
             <div class="form-control-dates-quantity">
                 <input name="add_qty" type="hidden"/>
@@ -64,17 +62,17 @@
                 <input name="start_date" type="hidden"/>
                 <input name="end_date" type="hidden"/>
             </div>
-            <div id="date_info" class="alert alert-info alert-dismissible" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><![CDATA[&times;]]></span>
-                </button>
-                Selecciona una fecha, por favor.
-            </div>
+<!--            <div id="date_info" class="alert alert-info alert-dismissible" role="alert">-->
+<!--                <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
+<!--                    <span aria-hidden="true"><![CDATA[&times;]]></span>-->
+<!--                </button>-->
+<!--                Seleccione una fecha, por favor.-->
+<!--            </div>-->
             <div id="date_error" class="alert alert-danger alert-dismissible hidden" role="alert">
                 <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true"><![CDATA[&times;]]></span>
                 </button>
-                Fecha no disponible. Selecciona otra.
+                Fecha no disponible. Seleccione otra.
             </div>
         </xpath>
     </template>

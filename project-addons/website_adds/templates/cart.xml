@@ -3,6 +3,17 @@
 
     <!-- Changes for cart template (website_sale/views/templates.xml) -->
     <template id="website_sale_cart_adds" inherit_id="website_sale.cart_lines">
+        <!-- Replace service by product template -->
+        <xpath expr="//td[@t-if='line.product_id.product_tmpl_id'][1]//span" position="attributes">
+            <attribute name="t-field">line.product_id.rented_product_id.image_small</attribute>
+        </xpath>
+        <xpath expr="//td[@t-if='line.product_id.product_tmpl_id'][2]//div//a" position="attributes">
+            <attribute name="t-attf-href">shop/product/#{ slug(line.product_id.rented_product_id.product_tmpl_id) }</attribute>
+        </xpath>
+        <xpath expr="//td[@t-if='line.product_id.product_tmpl_id'][2]//div//a//strong" position="attributes">
+            <attribute name="t-esc">line.product_id.rented_product_id.with_context(display_default_code=False).display_name</attribute>
+        </xpath>
+        <!-- Hide Qty -->
         <xpath expr="//td[@id='td-qty']" position="replace">
             <td class="text-center" id="td-qty">
                 <input type="text" class="js_quantity form-control quantity" readonly="readonly"
@@ -37,25 +48,69 @@
         </xpath>
         <xpath expr="//td[@id='td-price']" position="replace">
             <td class="text-center" id="td-subtotal">
-                <span t-if="line.price_unit" t-field="line.price_subtotal"
-                      t-options="{'widget': 'monetary','from_currency': website_sale_order.pricelist_id.currency_id,'display_currency': website.currency_id}"/>
+                <span t-if="line.price_unit" t-field="line.price_subtotal" t-options="{'widget': 'monetary','from_currency': website_sale_order.pricelist_id.currency_id,'display_currency': website.currency_id}"/>
             </td>
         </xpath>
     </template>
 
     <!-- Cart on one column (website_sale/views/templates.xml) -->
     <template id="website_sale_cart_one_column" inherit_id="website_sale.cart">
+        <xpath expr="//div[@class='col-md-8 col-sm-9 oe_cart']" position="before">
+            <p>rental: <span t-esc="website_sale_order and website_sale_order.website_order_line[0].product_id.rented_product_id"/></p>
+            <t t-if="website_sale_order and website_sale_order.website_order_line[0].product_id.rented_product_id is not None">
+                <div class="alert alert-danger alert-dismissible" role="alert">
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true"><![CDATA[&times;]]></span>
+                    </button>
+                    El accesorio seleccionado no está disponible en este momento. Por favor, seleccione otro.
+                </div>
+                <a href="/shop" class="btn btn-default mb32">
+                    <span class="fa fa-long-arrow-left" />
+                    <span class="hidden-xs">Continue Shopping</span>
+                    <span class="visible-xs-inline">Continue</span>
+                </a>
+            </t>
+        </xpath>
         <xpath expr="//div[@class='col-md-8 col-sm-9 oe_cart']" position="attributes">
             <attribute name="class">col-md-12 col-sm-12 oe_cart</attribute>
+            <attribute name="t-if">website_sale_order and website_sale_order.website_order_line[0].product_id.rented_product_id</attribute>
         </xpath>
         <xpath expr="//div[@id='right_column']" position="replace"/>
     </template>
 
     <!-- Popup cart-->
     <template id="website_sale_cart_popup_adds" inherit_id="website_sale.cart_popover">
+        <!-- Hide Qty -->
         <xpath expr="//small" position="replace"/>
         <xpath expr="//div[@class='text-center']//a[@class='btn btn-primary']" position="replace">
-             <a class="btn btn-primary" href="/shop/cart">View Cart</a>
+             <a class="btn btn-default" href="/shop/cart">View Cart</a>
+        </xpath>
+        <!-- Replace service by product template -->
+        <xpath expr="//div[@class='col-xs-3']//span" position="attributes">
+            <attribute name="t-field">line.product_id.rented_product_id.image_small</attribute>
+        </xpath>
+        <xpath expr="//div[@class='col-xs-9']//a" position="attributes">
+            <attribute name="t-attf-href">/shop/product/#{ slug(line.product_id.rented_product_id.product_tmpl_id) }</attribute>
+        </xpath>
+        <xpath expr="//div[@class='col-xs-9']//a//span" position="attributes">
+            <attribute name="t-esc">line.product_id.rented_product_id.with_context(display_default_code=False).display_name</attribute>
+        </xpath>
+    </template>
+
+    <!-- Checkout review cart -->
+    <template id="website_sale_one_step_checkout_osc_onestepcheckout" inherit_id="website_sale_one_step_checkout.osc_onestepcheckout">
+        <!-- Replace service by product template -->
+        <xpath expr="//table//a" position="attributes">
+            <attribute name="t-attf-href">/shop/product/#{ slug(line.product_id.rented_product_id.product_tmpl_id) }</attribute>
+        </xpath>
+        <xpath expr="//table//a//span" position="attributes">
+            <attribute name="t-field">line.product_id.rented_product_id.image_small</attribute>
+        </xpath>
+        <xpath expr="//div[hasclass('osc-product-name')]//strong" position="attributes">
+            <attribute name="t-field">line.product_id.rented_product_id.with_context(display_default_code=False).display_name</attribute>
+        </xpath>
+        <xpath expr="//table//td[hasclass('text-center')]//span" position="replace">
+            <span t-if="line.price_unit" tyle="white-space: nowrap;" t-field="line.price_subtotal" t-options="{'widget': 'monetary','from_currency': website_sale_order.pricelist_id.currency_id,'display_currency': website.currency_id}"/>
         </xpath>
     </template>
 
