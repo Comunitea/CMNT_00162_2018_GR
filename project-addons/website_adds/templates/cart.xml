@@ -8,7 +8,7 @@
             <attribute name="t-field">line.product_id.rented_product_id.image_small</attribute>
         </xpath>
         <xpath expr="//td[@t-if='line.product_id.product_tmpl_id'][2]//div//a" position="attributes">
-            <attribute name="t-attf-href">shop/product/#{ slug(line.product_id.rented_product_id.product_tmpl_id) }</attribute>
+            <attribute name="t-attf-href">/shop/product/#{ slug(line.product_id.rented_product_id.product_tmpl_id) }</attribute>
         </xpath>
         <xpath expr="//td[@t-if='line.product_id.product_tmpl_id'][2]//div//a//strong" position="attributes">
             <attribute name="t-esc">line.product_id.rented_product_id.with_context(display_default_code=False).display_name</attribute>
@@ -56,8 +56,7 @@
     <!-- Cart on one column (website_sale/views/templates.xml) -->
     <template id="website_sale_cart_one_column" inherit_id="website_sale.cart">
         <xpath expr="//div[@class='col-md-8 col-sm-9 oe_cart']" position="before">
-            <p>rental: <span t-esc="website_sale_order and website_sale_order.website_order_line[0].product_id.rented_product_id"/></p>
-            <t t-if="website_sale_order and website_sale_order.website_order_line[0].product_id.rented_product_id is not None">
+            <t t-if="len(website_sale_order and website_sale_order.website_order_line[0].product_id.rented_product_id) == 0">
                 <div class="alert alert-danger alert-dismissible" role="alert">
                     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                         <span aria-hidden="true"><![CDATA[&times;]]></span>

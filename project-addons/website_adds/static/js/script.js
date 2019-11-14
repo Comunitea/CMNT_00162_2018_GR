@@ -66,24 +66,23 @@ $(document).ready(function(){
         }
     }
     $('input[name="start-date"]').on('change', function(){
+//        No necessary by t-att-min date picker
 //        $('#date_info').hide();
-        var current_date = new Date();
-        current_date.setHours(0);
-        current_date.setMinutes(0);
-        current_date.setMilliseconds(0);
-        var start_date = new Date($('input[name="start-date"]').val());
-        if (start_date.getTime() < current_date.getTime()){
-            $('a#add_to_cart').addClass('hidden');
-            $('#date_error').removeClass('hidden');
-        } else {
-            $('a#add_to_cart').removeClass('hidden');
-            $('#date_error').addClass('hidden');
-        }
+//        var current_date = new Date();
+//        current_date.setHours(0);
+//        current_date.setMinutes(0);
+//        current_date.setMilliseconds(0);
+//        var start_date = new Date($('input[name="start-date"]').val());
+//        No necessary by hide-show form-control-dates-select and form-control-dates-quantity
+//        if (start_date.getTime() < current_date.getTime()){
+//            $('a#add_to_cart').addClass('hidden');
+//            $('#date_error').removeClass('hidden');
+//        } else {
+//            $('a#add_to_cart').removeClass('hidden');
+//            $('#date_error').addClass('hidden');
+//        }
         calcDates();
     });
-    /*$('input[name="end-date"]').on('change', function(){
-        calcDates();
-    });*/
     $('select[name="week-duration"]').on('change', function(){
         calcDates();
     });

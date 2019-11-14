@@ -62,18 +62,20 @@
                 <input name="start_date" type="hidden"/>
                 <input name="end_date" type="hidden"/>
             </div>
+            <!-- No necessary by hide-show form-control-dates-select and form-control-dates-quantity -->
 <!--            <div id="date_info" class="alert alert-info alert-dismissible" role="alert">-->
 <!--                <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
 <!--                    <span aria-hidden="true"><![CDATA[&times;]]></span>-->
 <!--                </button>-->
 <!--                Seleccione una fecha, por favor.-->
 <!--            </div>-->
-            <div id="date_error" class="alert alert-danger alert-dismissible hidden" role="alert">
-                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                    <span aria-hidden="true"><![CDATA[&times;]]></span>
-                </button>
-                Fecha no disponible. Seleccione otra.
-            </div>
+            <!-- No necessary by t-att-min date picker -->
+<!--            <div id="date_error" class="alert alert-danger alert-dismissible hidden" role="alert">-->
+<!--                <button type="button" class="close" data-dismiss="alert" aria-label="Close">-->
+<!--                    <span aria-hidden="true"><![CDATA[&times;]]></span>-->
+<!--                </button>-->
+<!--                Fecha no disponible. Seleccione otra.-->
+<!--            </div>-->
         </xpath>
     </template>
 
