@@ -27,6 +27,7 @@
         'website_sale_require_login',
         'website_sale_one_step_checkout',
         'website_sale_one_step_checkout_delivery',
+        'website_canonical_url',
     ],
     'data': [
         'data/menu_data.xml',
