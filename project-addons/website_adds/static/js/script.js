@@ -28,31 +28,27 @@ $(document).ready(function(){
 
         var start_date = $('input[name="start-date"]').val();
         var rental_selected = $('select[name="week-duration"] option').filter(':selected').val().split('-');
-        var weeks = rental_selected[0];
-        var price = rental_selected[1];
+        var weeks = parseInt(rental_selected[0]);
+        var quantity = parseInt(weeks * 7);
+        var price = parseFloat(rental_selected[1]);
+        var price_total = parseFloat(price * weeks);
 
         /* "start date" and "end date" calculation */
         if(start_date && weeks){
             var start_date_new = new Date(start_date);
             var start_math = Date.parse(start_date_new);
-            var end_math = Math.abs(start_math + (864e5 * ((weeks) - 1)));
+            var end_math = Math.abs(start_math + (864e5 * ((quantity) - 1)));
             var end_date = new Date(end_math);
             var end_day   = ('0' + (end_date.getDate())).slice(-2);
             var end_month = ('0' + (end_date.getMonth() + 1)).slice(-2);
             var end_year  = end_date.getFullYear();
             var parse_end_date = end_year+'-'+end_month+'-'+end_day;
             $('input[name="end-date"]').val(parse_end_date)
-
-            /* price and weeks quantity calculation */
-            var quantity = parseInt(weeks);
-            var price_by_week = parseFloat(price.replace(',', '.'));
-            var price_total = price_by_week * quantity;
-
-            $('input[name="add_qty"]').val(quantity);
+            $('input[name="add_qty"]').val(parseInt(weeks));
 
             if(price_total){
                 /* sale_rental fields */
-                var number_of_days = Math.abs((weeks));
+                var number_of_days = Math.abs(quantity);
                 $('input[name="number_of_days"]').val(number_of_days)
                 $('input[name="start_date"]').val(start_date)
                 $('input[name="end_date"]').val(parse_end_date)
