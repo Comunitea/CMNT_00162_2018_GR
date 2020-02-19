@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- Enable extra option checkout form to rental agreement -->
+    <record id="model_sale_order" model="ir.model">
+        <field name="website_form_access">True</field>
+        <field name="website_form_label">Rental Agreement</field>
+    </record>
+    <function model="ir.model.fields" name="formbuilder_whitelist">
+        <value>sale.order</value>
+        <value eval="[
+            'patient_name',
+            'patient_dni',
+            'patient_mail',
+            'patient_mobile',
+            'patient_street_address',
+            'patient_state_address',
+            'patient_state_region_address',
+            'patient_zip_address',
+            'patient_birth_date',
+            'patient_prescriber',
+        ]"/>
+    </function>
+
+    <record id="sale_order_form_rental_agreement" model="ir.ui.view">
+        <field name="name">sale.order.form.rental.agreement</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//page[last()]" position="after">
+                <page string="Rental Agreement" create="0" delete="0">
+                    <group>
+                        <group name="patient_info" string="Patient Info">
+                            <field name="patient_name"/>
+                            <field name="patient_mail"/>
+                            <field name="patient_mobile"/>
+                            <field name="patient_street_address"/>
+                            <field name="patient_state_address"/>
+                            <field name="patient_state_region_address"/>
+                            <field name="patient_zip_address"/>
+                            <field name="patient_birth_date"/>
+                            <field name="patient_prescriber"/>
+                        </group>
+                        <group name="sign_info" string="Sign Info">
+                            <field name="rental_signer"/>
+                            <field name="rental_signature_image" widget="image" readonly="1"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

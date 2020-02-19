@@ -14,8 +14,8 @@
         <xpath expr="//footer" position="after">
             <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"
                     type="text/javascript"/>
-            <script src="/website_adds/static/js/script.js"
-                    type="text/javascript"/>
+            <script src="/website_adds/static/js/script.js" type="text/javascript"/>
+            <script src="/website_adds/static/js/website_rental_agreement.js" type="text/javascript"/>
         </xpath>
     </template>
 

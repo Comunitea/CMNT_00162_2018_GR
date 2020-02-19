@@ -27,8 +27,8 @@
             <tr>
                 <th width="100">Product</th>
                 <th/>
-                <th class="text-center">Start date</th>
-                <th class="text-center">End date</th>
+                <th class="text-center">Fecha Inicio</th>
+                <th class="text-center">Fecha Fin</th>
                 <th width="130" class="text-center hidden">Weeks</th>
                 <!--<th width="100" class="text-center">Price</th>-->
                 <th width="100" class="text-center">Subtotal</th>
@@ -93,34 +93,6 @@
         </xpath>
         <xpath expr="//div[@class='col-xs-9']//a//span" position="attributes">
             <attribute name="t-esc">line.product_id.rented_product_id.with_context(display_default_code=False).display_name</attribute>
-        </xpath>
-    </template>
-
-    <!-- Checkout review cart -->
-    <template id="website_sale_one_step_checkout_osc_onestepcheckout" inherit_id="website_sale_one_step_checkout.osc_onestepcheckout">
-        <!-- Replace service by product template -->
-        <xpath expr="//table//a" position="attributes">
-            <attribute name="t-attf-href">/shop/product/#{ slug(line.product_id.rented_product_id.product_tmpl_id) }</attribute>
-        </xpath>
-        <xpath expr="//table//a//span" position="attributes">
-            <attribute name="t-field">line.product_id.rented_product_id.image_small</attribute>
-        </xpath>
-        <xpath expr="//div[hasclass('osc-product-name')]//strong" position="attributes">
-            <attribute name="t-field">line.product_id.rented_product_id.with_context(display_default_code=False).display_name</attribute>
-        </xpath>
-        <xpath expr="//table//td[hasclass('text-center')]//span" position="replace">
-            <span t-if="line.price_unit" tyle="white-space: nowrap;" t-field="line.price_subtotal" t-options="{'widget': 'monetary','from_currency': website_sale_order.pricelist_id.currency_id,'display_currency': website.currency_id}"/>
-        </xpath>
-        <!-- Checkout address -->
-        <xpath expr="//t[@t-set='same_shipping']" position="attributes">
-            <attribute name="t-value">bool(order.partner_shipping_id==order.partner_id)</attribute>
-        </xpath>
-    </template>
-
-    <!-- Checkout address -->
-    <template id="website_sale_one_step_checkout_address" inherit_id="website_sale_one_step_checkout.address">
-        <xpath expr="//t[@t-if='not only_services and order.partner_id.id != request.website.user_id.sudo().partner_id.id']" position="attributes">
-            <attribute name="t-if">order.partner_id.id != request.website.user_id.sudo().partner_id.id</attribute>
         </xpath>
     </template>
 

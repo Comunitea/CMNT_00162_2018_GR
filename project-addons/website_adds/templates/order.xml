@@ -1,48 +1,108 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <odoo>
 
-    <!-- Add Start and End date lines to order page -->
-    <template id="webste_portal_order_add" inherit_id="website_portal_sale.orders_followup">
-        <xpath expr="//div[@class='panel-body']/div[3]/div[@class='col-md-6']" position="replace">
-            <div class="col-md-4">
-                <strong>Product</strong>
-            </div>
-            <div class="col-md-3">
-                <strong>Start / End Date</strong>
-            </div>
-        </xpath>
-        <xpath expr="//div[@class='panel-body']/div[3]/div[@class='col-md-2 text-right'][2]" position="attributes">
-            <attribute name="class">col-md-1 text-right</attribute>
-        </xpath>
-        <xpath expr="//div[@class='panel-body']//div[@id='product_name']" position="attributes">
-            <attribute name="class">col-md-3</attribute>
-        </xpath>
-        <xpath expr="//div[@class='row orders_vertical_align']//div[@id='product_name']" position="after">
-            <div class="col-md-3">
-                <t t-if="ol.start_date and ol.end_date">
-                    <span t-esc="ol.start_date"/> /
-                    <span t-esc="ol.end_date"/>
-                </t>
+    <!-- Add rental data to order page -->
+    <template id="webste_portal_order_add" inherit_id="website_portal_sale.orders_followup" name="Purchase Order Game Ready">
+        <!-- Replace head-->
+        <xpath expr="//div[@class='panel-body']/div[3]" position="replace">
+            <div class="row">
+                <div class="col-md-6">
+                    <strong>Producto</strong>
+                </div>
+                <div class="col-md-2">
+                    <strong>Fecha Inicio</strong>
+                </div>
+                <div class="col-md-2">
+                    <strong>Fecha Fin</strong>
+                </div>
+                <div class="col-md-2 text-right">
+                    <strong>Subtotal</strong>
+                </div>
             </div>
         </xpath>
-        <xpath expr="//div[@class='row orders_vertical_align']//div[@class='col-md-2 text-right'][2]" position="attributes">
-            <attribute name="class">col-md-1 text-right</attribute>
+        <!-- Replace body-->
+        <xpath expr="//div[@class='row orders_vertical_align']" position="replace">
+            <div class="row supplier_orders_vertical_align">
+                <div class="col-md-1 text-center">
+                    <img t-att-src="'/web/image/product.product/%s/image_small/48x48' % ol.product_id.id"/>
+                </div>
+                <div id='product_name' class="col-md-5">
+                    <span t-esc="ol.product_id.name"/>
+
+                </div>
+                <div class="col-md-2">
+                    <t t-if="ol.start_date">
+                        <span t-field="ol.start_date" t-options="{'widget': 'date'}"/>
+                    </t>
+                </div>
+                <div class="col-md-2">
+                    <t t-if="ol.end_date">
+                        <span t-field="ol.end_date" />
+                    </t>
+                </div>
+                <div class="col-md-2 text-right">
+                    <span t-field="ol.price_subtotal"
+                          t-field-options='{"widget": "monetary", "display_currency": "ol.currency_id"}'/>
+                </div>
+            </div>
         </xpath>
     </template>
 
-    <!-- Add Start and End date lines to order confirmation page -->
+    <!-- Add rental data to order confirmation page -->
     <template id="website_sale_confirmation_add" inherit_id="website_sale.confirmation">
-        <xpath expr="//div[@class='oe_cart']/table[@class='table'][1]/thead/tr/th[1]" position="after">
-            <th>Start / End Date</th>
+        <!-- Replace head-->
+        <xpath expr="//div[@class='oe_cart']/table[@class='table'][1]/thead" position="replace">
+            <tr>
+                <th>Productos</th>
+                <th/>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+                <th class="text-right" width="100">Subtotal</th>
+            </tr>
         </xpath>
-        <xpath expr="//div[@class='oe_cart']/table[@class='table'][1]/tbody/tr/td[1]" position="after">
-            <td>
-                <div t-if="line.start_date and line.end_date">
-                    <span t-esc="line.start_date"/> /
-                    <span t-esc="line.end_date"/>
-                </div>
-            </td>
+        <!-- Replace body-->
+        <xpath expr="//div[@class='oe_cart']/table[@class='table'][1]/tbody" position="replace">
+            <tbody>
+                <tr t-foreach="order.order_line" t-as="line">
+                    <td t-if="line.product_id.product_tmpl_id">
+                        <a t-attf-href="/shop/product/#{ slug(line.product_id.rented_product_id.product_tmpl_id) }">
+                            <span t-field="line.product_id.rented_product_id.image_small" t-options="{'widget': 'image', 'class': 'img-rounded'}" />
+                        </a>
+                    </td>
+                    <td t-if="line.product_id.product_tmpl_id">
+                        <div>
+                            <strong t-field="line.product_id.with_context(display_default_code=False).display_name" />
+                        </div>
+                        <div class="text-muted">
+                            <t t-foreach="line.name.splitlines()[1:]" t-as="name_line">
+                                <span><t t-esc="name_line"/></span><br/>
+                            </t>
+                        </div>
+                    </td>
+                    <td class="hidden">
+                        <div id="quote_qty" class="hidden">
+                            <span t-esc="int(line.product_uom_qty) == line.product_uom_qty and int(line.product_uom_qty) or line.product_uom_qty"/>
+                            <span t-field="line.product_uom"/>
+                        </div>
+                    </td>
+                    <td>
+                        <div t-if="line.start_date">
+                            <span t-field="line.start_date" t-options="{'widget': 'date'}"/>
+                        </div>
+                    </td>
+                    <td>
+                        <div t-if="line.end_date">
+                            <span t-field="line.end_date" t-options="{'widget': 'date'}"/>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="text-right" t-field="line.price_subtotal"
+                             t-options='{"widget": "monetary", "display_currency": order.pricelist_id.currency_id}'/>
+                    </td>
+                </tr>
+            </tbody>
         </xpath>
+
         <xpath expr="//div[@id='quote_qty']/span[@t-field='line.product_uom']" position="replace"/>
         <xpath expr="//div[@class='oe_cart']/table[@class='table'][1]//tfooter/tr[1]/td[1]" position="attributes">
             <attribute name="colspan">3</attribute>
@@ -55,18 +115,134 @@
         </xpath>
     </template>
 
-    <!-- Add Start and End date lines to PDF report -->
-    <template id="sale_report_saleorder_document_add" inherit_id="sale.report_saleorder_document">
-        <xpath expr="//table[1]/thead/tr/th[1]" position="after">
-            <th class="text-right">Start / End Date</th>
+    <!-- Add rental data to quote confirmation page -->
+    <template id="website_quote_pricing" inherit_id="website_quote.pricing" name="Price Game Ready">
+        <!-- Replace head-->
+        <xpath expr="//table//thead//tr" position="replace">
+            <tr>
+                <th colspan="2">Productos</th>
+                <th>Fecha Inicio</th>
+                <th>Fecha Fin</th>
+                <th colspan="2" class="text-right" width="100">Precio Total</th>
+                <th/>
+            </tr>
         </xpath>
-        <xpath expr="//table[1]/tbody/t[@t-foreach='page']/t[2]/tr/td[1]" position="after">
-            <td class="text-right">
-                <div t-if="l.start_date and l.end_date">
-                    <span t-esc="l.start_date"/> /
-                    <span t-esc="l.end_date"/>
+
+        <!-- Replace body-->
+        <xpath expr="//table[1]/tbody/t[@t-foreach='page']/t[2]" position="replace">
+            <t t-foreach="layout_category['lines']" t-as="line">
+                <tr>
+                    <td colspan="2">
+                        <img t-att-src="'/web/image/product.product/%s/image_small/48x48' % line.product_id.id"/>
+                        <span class="ml8" t-field="line.name"/>
+                    </td>
+                    <td>
+                        <div t-if="line.start_date">
+                            <span t-field="line.start_date" t-options="{'widget': 'date'}"/>
+                        </div>
+                    </td>
+                    <td>
+                        <div t-if="line.end_date">
+                            <span t-field="line.end_date" t-options="{'widget': 'date'}"/>
+                        </div>
+                    </td>
+                    <td class="text-right oe_order_line_price_subtotal" groups="sale.group_show_price_subtotal">
+                        <span t-field="line.price_subtotal"
+                              t-options='{"widget": "monetary", "display_currency": quotation.pricelist_id.currency_id}'/>
+                    </td>
+                    <td colspan="2" class="text-right oe_order_line_price_total" groups="sale.group_show_price_total">
+                        <span t-field="line.price_total"
+                              t-options='{"widget": "monetary", "display_currency": quotation.pricelist_id.currency_id}'/>
+                    </td>
+                    <td/>
+                </tr>
+            </t>
+        </xpath>
+    </template>
+
+    <!-- Add rental data to PDF report -->
+    <template id="sale_report_saleorder_document_add" inherit_id="sale.report_saleorder_document">
+        <!-- Replace head-->
+        <xpath expr="//table[1]/thead/tr" position="replace">
+            <tr>
+                <th colspan="3">Descripción</th>
+                <th class="text-right">Fecha Inicio</th>
+                <th class="text-right">Fecha Fin</th>
+                <th/>
+                <th class="text-right price_tax_included" groups="sale.group_show_price_total">Precio Total</th>
+            </tr>
+        </xpath>
+        <!-- Replace body-->
+        <xpath expr="//table[1]/tbody/t[@t-foreach='page']/t[2]" position="replace">
+            <t t-foreach="layout_category['lines']" t-as="l">
+                <tr>
+                    <td colspan="3">
+                        <img t-att-src="'/web/image/product.product/%s/image_small/48x48' % l.product_id.id"/>
+                        <span class="ml8" t-field="l.name"/>
+                    </td>
+                    <td class="text-right" t-if="l.start_date">
+                        <span t-field="l.start_date" t-options="{'widget': 'date'}"/>
+                    </td>
+                    <td class="text-right" t-if="l.end_date">
+                        <span t-field="l.end_date" t-options="{'widget': 'date'}"/>
+                    </td>
+                    <td/>
+                    <td class="text-right" groups="sale.group_show_price_total">
+                        <span t-field="l.price_total"
+                              t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
+                    </td>
+                </tr>
+            </t>
+        </xpath>
+
+        <!-- Add Rental Agreement -->
+        <xpath expr="//div[hasclass('page')]" position="inside">
+            <t t-set="line" t-value="doc.order_line[0]"/>
+            <div class="row" style="page-break-before:always;">
+                <div class="col-xs-12 text-left">
+                    <h1 class="text-center mt0"><strong>Acuerdo de Alquiler</strong></h1>
+
+                    <h3 class="mt32"><strong>Información del Paciente</strong></h3>
+                    <p><strong>Nombre: </strong><span t-field="doc.patient_name"/></p>
+                    <p><strong>DNI: </strong><span t-field="doc.patient_dni"/></p>
+                    <p><strong>Email: </strong><span t-esc="doc.patient_mail"/></p>
+                    <p><strong>Teléfono: </strong><span t-field="doc.patient_mobile"/></p>
+                    <p><strong>Dirección: </strong><span t-field="doc.patient_street_address"/></p>
+                    <p><strong>Provincia: </strong><span t-field="doc.patient_state_address"/></p>
+                    <p><strong>Municipio: </strong><span t-esc="doc.patient_state_region_address"/></p>
+                    <p><strong>Código Postal: </strong><span t-field="doc.patient_zip_address"/></p>
+                    <p><strong>Fecha de nacimiento: </strong><span t-field="doc.patient_birth_date" t-options="{'widget': 'date'}"/></p>
+                    <p><strong>Prescriptor/a: </strong><span t-field="doc.patient_prescriber"/></p>
+
+                    <h3 class="mt32"><strong>Información del Alquiler</strong></h3>
+                    <p><strong>Semanas Alquiler: </strong><span t-field="line.number_of_days"/></p>
+                    <p><strong>Total alquiler: </strong><span t-field="doc.amount_total" t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/></p>
+                    <p><strong>Fecha Comienzo: </strong><span t-field="line.start_date" t-options="{'widget': 'date'}"/></p>
+                    <p><strong>Fecha Finalización: </strong><span t-field="line.end_date" t-options="{'widget': 'date'}"/></p>
+
+                    <h3 class="mt32"><strong>Aceptación De Responsabilidad Financiera y Términos Legales</strong></h3>
+                    <p>Con mi firma, estoy de acuerdo con los términos mencionados a continuación, así como los cargos especificados por el servicio contratado y las consecuencias de un mal uso:</p>
+                    <span class="ml16">
+                        - Cualquier daño ocasionado al dispositivo y/o bandas y/o accesorios que incurra en reparación, será cargado al cliente.
+                    </span>
+                    <br/>
+                    <span class="ml16">
+                        - Por demora en entrega del dispositivo y/o bandas y/o accesorios sin previo aviso serán cargados 40€ al día.
+                    </span>
+                    <br/>
+                    <span class="ml16">
+                        - Si el producto no es entregado en los 5 días naturales siguientes a la finalización del alquiler, serán cargados 3.500€.
+                    </span>
+                    <br/>
+
+                    <p class="mt4">Con mi firma, yo también: <t t-call="website_legal_page.acceptance_full"/></p>
+
+                    <h3 class="mt32"><strong>Firma Del Paciente / Representante Del Paciente</strong></h3>
+                    <div><img t-att-src="'data:image/png;base64,%s' % doc.rental_signature_image" height="150" width="550"/></div>
+                    <p class="text-left mt8">Firmado el <strong><span t-field="doc.date_order" t-options="{'widget': 'date'}"/></strong>
+                        por: <strong><span t-esc="doc.rental_signer or ''"/></strong> </p>
                 </div>
-            </td>
+            </div>
         </xpath>
     </template>
 

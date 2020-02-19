@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 import logging
 
-from odoo import api, models
+from odoo import api, fields, models, _
 from odoo.http import request
 from odoo.exceptions import UserError, ValidationError
 
@@ -9,14 +9,30 @@ _logger = logging.getLogger(__name__)
 
 
 class SaleOrder(models.Model):
-    _inherit = "sale.order"
+    _inherit = 'sale.order'
+
+    # Rental Agreement - Patient info
+    patient_name = fields.Char(string='Name')
+    patient_dni = fields.Char(string='DNI')
+    patient_mail = fields.Char(string='Email')
+    patient_mobile = fields.Char(string='Mobile')
+    patient_street_address = fields.Char(string='Address')
+    patient_state_address = fields.Char(string='State')
+    patient_state_region_address = fields.Char(string='State Region')
+    patient_zip_address = fields.Char(string='Name')
+    patient_birth_date = fields.Date(string='Birth Date')
+    patient_prescriber = fields.Char(string='Prescriber')
+    # Sign data
+    rental_signer = fields.Char(string='Signer')
+    rental_signature_image = fields.Binary(string="Sign")
+
 
     @api.multi
     def _cart_update(self, product_id=None, line_id=None, add_qty=0, set_qty=0, attributes=None, **kwargs):
         """
-            Add or set product quantity, add_qty can be negative
-
-            Hook to change product template by rental service, including price_unit by pricelist items
+            Add or set product quantity, add_qty can be negative.
+            Hook to change product template by rental service, including price_unit by pricelist items.
+            When add to cart we get from context but later in checkout get from saved order line values.
         """
         self.ensure_one()
         SaleOrderLineSudo = self.env['sale.order.line'].sudo()
@@ -83,15 +99,15 @@ class SaleOrder(models.Model):
                                                                              product_rental_id.taxes_id,
                                                                              order_line[0].tax_id,
                                                                              self.company_id)
+                # Hook to change product template by rental service, including price_unit by pricelist items
+                # When add to cart we get from context but later in checkout get from saved order line values.
                 values.update({
                     'product_id': product_rental_id.id,
                     'product_uom': product_rental_id.uom_id.id,
                     'price_unit': pu,
-                    'start_date': product_context['start_date'],
-                    'end_date': product_context['end_date'],
-                    'number_of_days': product_context['number_of_days'],
+                    'start_date': product_context.get('start_date', order_line.start_date),
+                    'end_date': product_context.get('end_date', order_line.end_date),
+                    'number_of_days': product_context.get('number_of_days', order_line.number_of_days),
                 })
-
             order_line.write(values)
-
         return {'line_id': order_line.id, 'quantity': quantity}

@@ -1,7 +1,4 @@
 # -*- coding: utf-8 -*-
-# © 2019 Comunitea
-# Ruben Seijas <ruben@comunitea.com> - Pavel Smirnov <pavel@comunitea.com>
-# License AGPL-3 - See http://www.gnu.org/licenses/agpl-3.0.html
 {
     'name': 'Website adds',
     'version': '1.0',
@@ -23,11 +20,15 @@
         'website_legal_page',
         'website_signup_legal_page_required',
         'website_sale',
-        'website_sale_filter_countries',
         'website_sale_require_login',
-        'website_sale_one_step_checkout',
-        'website_sale_one_step_checkout_delivery',
         'website_canonical_url',
+        # Checkout with extra option form for rental agreement
+        'website_form_builder',
+        'contract_digitized_signature',
+        # OSC Checkout without extra option
+        # 'website_sale_filter_countries',
+        # 'website_sale_one_step_checkout',
+        # 'website_sale_one_step_checkout_delivery',
     ],
     'data': [
         'data/menu_data.xml',
@@ -42,6 +43,8 @@
         'templates/views.xml',
         'templates/res_config.xml',
         'views/product_pricelist_views.xml',
+        'views/sale_order_views.xml',
+        'views/sale_rental_views.xml',
     ],
     'images': [
         'static/description/icon.png'

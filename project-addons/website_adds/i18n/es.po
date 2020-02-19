@@ -7,8 +7,8 @@ msgstr ""
 "Project-Id-Version: Odoo Server 10.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-07-23 11:29+0000\n"
-"PO-Revision-Date: 2019-07-23 11:29+0000\n"
-"Last-Translator: <>\n"
+"PO-Revision-Date: 2020-02-03 11:29+0000\n"
+"Last-Translator: <ruben@comunitea.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -16,29 +16,51 @@ msgstr ""
 "Plural-Forms: \n"
 
 #. module: website_adds
-#: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
-msgid "1 semana"
-msgstr "1 semana"
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "&amp;times;"
+msgstr "&amp;times;"
 
 #. module: website_adds
-#: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
-msgid "2 semanas"
-msgstr "2 semanas"
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "- Cualquier daño ocasionado al dispositivo y/o bandas y/o accesorios que incurra en la reparación del mismo será cargado al cliente."
+msgstr "- Cualquier daño ocasionado al dispositivo y/o bandas y/o accesorios que incurra en la reparación del mismo será cargado al cliente."
 
 #. module: website_adds
-#: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
-msgid "3 semanas"
-msgstr "3 semanas"
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "- Por demora en entrega del dispositivo y/o bandas y/o accesorios sin previo aviso serán cargados 40€ al día."
+msgstr "- Por demora en entrega del dispositivo y/o bandas y/o accesorios sin previo aviso serán cargados 40€ al día."
 
 #. module: website_adds
-#: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
-msgid "4 semanas"
-msgstr "4 semanas"
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "- Si el producto no es entregado en los 5 días naturales siguientes a la finalización del alquiler, serán cargados 3.500€."
+msgstr "- Si el producto no es entregado en los 5 días naturales siguientes a la finalización del alquiler, serán cargados 3.500€."
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "123"
+msgstr "123"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_one_column
+msgid "<span aria-hidden=\"true\">&amp;times;</span>"
+msgstr "<span aria-hidden=\"true\">&amp;times;</span>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_one_column
+msgid "<span class=\"fa fa-long-arrow-left\"/>\n"
+"                    <span class=\"hidden-xs\">Continue Shopping</span>\n"
+"                    <span class=\"visible-xs-inline\">Continue</span>"
+msgstr "<span class=\"fa fa-long-arrow-left\"/>\n"
+"                    <span class=\"hidden-xs\">Continuar Comprando</span>\n"
+"                    <span class=\"visible-xs-inline\">Continuar</span>"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_sale_product_price_adds
-msgid "<span aria-hidden=\"true\">&amp;times;</span>"
-msgstr "<span aria-hidden=\"true\">&amp;times;</span>"
+msgid "<span class=\"form-control-dates-select\"><strong>Precio: </strong> Seleccione inicio y duración.</span>"
+msgstr "<span class=\"form-control-dates-select\"><strong>Precio: </strong> Seleccione inicio y duración.</span>"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_sale_products_item_adds
@@ -46,14 +68,29 @@ msgid "<span> por semana</span>"
 msgstr "<span> por semana</span>"
 
 #. module: website_adds
-#: model:ir.ui.view,arch_db:website_adds.website_sale_product_price_adds
-msgid "<span><strong>Precio por semana: </strong></span>"
-msgstr "<span><strong>Precio por semana: </strong></span>"
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "<span>Grabar y continuar </span><span class=\"fa fa-long-arrow-right\"/>"
+msgstr "<span>Grabar y continuar </span><span class=\"fa fa-long-arrow-right\"/>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "<strong>Acuerdo de Alquiler</strong>"
+msgstr "<strong>Acuerdo de Alquiler</strong>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "<strong>Dibuje su firma</strong>"
+msgstr "<strong>Dibuje su firma</strong>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.webste_portal_order_add
+msgid "<strong>End Date</strong>"
+msgstr "<strong>Fecha Fin</strong>"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_sale_product_price_adds
-msgid "<strong>Precio final: </strong><span class=\"dates-total-price\"/> €"
-msgstr "<strong>Precio final: </strong><span class=\"dates-total-price\"/> €"
+msgid "<strong>Precio: </strong><span class=\"dates-total-price\"/> €"
+msgstr "<strong>Precio: </strong><span class=\"dates-total-price\"/> €"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.webste_portal_order_add
@@ -62,8 +99,59 @@ msgstr "<strong>Producto</strong>"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.webste_portal_order_add
-msgid "<strong>Start / End Date</strong>"
+msgid "<strong>Start Date</strong>"
 msgstr "<strong>Fecha Inicio / Fin</strong>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.webste_portal_order_add
+msgid "<strong>Subtotal</strong>"
+msgstr "<strong>Subtotal</strong>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "<u>Autorización Y Aceptación De Responsabilidad Financiera</u>"
+msgstr "<u>Autorización Y Aceptación De Responsabilidad Financiera</u>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "<u>Autorización</u>"
+msgstr "<u>Autorización</u>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "<u>Datos Tarjeta</u>"
+msgstr "<u>Datos Tarjeta</u>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "<u>Fecha y Firma</u>"
+msgstr "<u>Fecha y Firma</u>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "<u>Firma Del Paciente / Representante Del Paciente</u>"
+msgstr "<u>Firma Del Paciente / Representante Del Paciente</u>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "<u>Información Paciente</u>"
+msgstr "<u>Información Paciente</u>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "<u>Información Tarjeta Crédito</u>"
+msgstr "<u>Información Tarjeta Crédito</u>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "<u>Información del Alquiler</u>"
+msgstr "<u>Información del Alquiler</u>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "<u>Información del Paciente</u>"
+msgstr "<u>Información del Paciente</u>"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
@@ -71,9 +159,71 @@ msgid "Accessories"
 msgstr "Accesorios"
 
 #. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info_option
+msgid "Acuerdo Alquiler<span class=\"chevron\"/>"
+msgstr "Acuerdo Alquiler<span class=\"chevron\"/>"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Acuerdo de Alquiler"
+msgstr "Acuerdo de Alquiler"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_patient_street_address
+msgid "Address"
+msgstr "Dirección"
+
+#. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
 msgid "Bandas"
 msgstr "Bandas"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_patient_birth_date
+msgid "Birth Date"
+msgstr "Birth Date"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "C.P"
+msgstr "C.P"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_card_code
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "CVV/CVC"
+msgstr "CVV/CVC"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "CVV/CVC:"
+msgstr "CVV/CVC:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Cancelar"
+msgstr "Cancelar"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_order_form_rental_agreement
+msgid "Card Info"
+msgstr "Card Info"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_card_number
+msgid "Card Number"
+msgstr "Card Number"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_card_holder
+msgid "Cardholder"
+msgstr "Cardholder"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Con mi firma, estoy de acuerdo con los términos mencionados arriba, así como los cargos especificados por el servicio contratado y las consecuencias de un mal uso:"
+msgstr "Con mi firma, estoy de acuerdo con los términos mencionados arriba, así como los cargos especificados por el servicio contratado y las consecuencias de un mal uso:"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
@@ -81,9 +231,29 @@ msgid "Contactar con nosotros"
 msgstr "Contactar con nosotros"
 
 #. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Código Postal:"
+msgstr "Código Postal:"
+
+#. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
 msgid "Datos personales"
 msgstr "Datos personales"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Description"
+msgstr "Descripción"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Dirección"
+msgstr "Dirección"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Dirección:"
+msgstr "Dirección:"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
@@ -91,9 +261,83 @@ msgid "Duración"
 msgstr "Duración"
 
 #. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_one_column
+msgid "El accesorio seleccionado no está disponible en este momento. Por favor, seleccione otro."
+msgstr "El accesorio seleccionado no está disponible en este momento. Por favor, seleccione otro."
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_patient_mail
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Email"
+msgstr "Correo electrónico"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Email:"
+msgstr "Correo electrónico:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+#: model:ir.ui.view,arch_db:website_adds.website_quote_pricing
+#: model:ir.ui.view,arch_db:website_adds.website_sale_confirmation_add
+msgid "End Date"
+msgstr "Fecha Fin"
+
+#. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_payment
 msgid "End date"
-msgstr "Fecha fin"
+msgstr "Fecha Fin"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_card_expedition
+msgid "Expedition Date"
+msgstr "Fecha de Expedición"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Fecha"
+msgstr "Fecha"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Fecha Comienzo:"
+msgstr "Fecha Comienzo:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Fecha Expedición:"
+msgstr "Fecha Expedición:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Fecha Fin"
+msgstr "Fecha Fin"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Fecha Finalización:"
+msgstr "Fecha Finalización:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Fecha Inicio"
+msgstr "Fecha Inicio"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Fecha de expedición"
+msgstr "Fecha de expedición"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Fecha de nacimiento"
+msgstr "Fecha de nacimiento"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Fecha de nacimiento:"
+msgstr "Fecha de nacimiento:"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_sale_product_adds
@@ -106,9 +350,24 @@ msgid "Fecha inicio alquiler"
 msgstr "Fecha inicio alquiler"
 
 #. module: website_adds
-#: model:ir.ui.view,arch_db:website_adds.website_sale_product_price_adds
-msgid "Fecha no disponible. Selecciona otra."
-msgstr "Fecha no disponible. Selecciona otra."
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Firma"
+msgstr "Firma"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Firmado por"
+msgstr "Firmado por"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Firmar"
+msgstr "Firmar"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Firmar Acuerdo de Alquiler"
+msgstr "Firmar Acuerdo de Alquiler"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
@@ -121,15 +380,37 @@ msgid "Guías y manuales"
 msgstr "Guías y manuales"
 
 #. module: website_adds
+#: model:ir.model.fields,help:website_adds.field_product_pricelist_item_selectable
+msgid "If checked, it will be selectable into the website selector."
+msgstr "Si está seleccionado, será visible en el selector del sitio web."
+
+#. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
 msgid "Información clínica"
 msgstr "Información clínica"
 
 #. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_revi_reviews_settings_social_instagram
 #: model:ir.model.fields,field_description:website_adds.field_website_config_settings_social_instagram
 #: model:ir.model.fields,field_description:website_adds.field_website_social_instagram
 msgid "Instagram Account"
 msgstr "Cuenta Instagram"
+
+#. module: website_adds
+#: code:addons/website_adds/models/sale_order.py:60
+#, python-format
+msgid "It is forbidden to modify a sale order which is not in draft status"
+msgstr "Está prohibido modificar un pedido de venta. Solo se pueden modificar los presupuestos."
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Limpiar"
+msgstr "Limpiar"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "MM/DD"
+msgstr "MM/DD"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
@@ -157,9 +438,122 @@ msgid "Mis presupuestos"
 msgstr "Mis presupuestos"
 
 #. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_patient_mobile
+msgid "Mobile"
+msgstr "Móvil"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Municipio"
+msgstr "Municipio"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Municipio:"
+msgstr "Municipio:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Móvil"
+msgstr "Móvil"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_patient_name
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_patient_zip_address
+msgid "Name"
+msgstr "Nombre"
+
+#. module: website_adds
+#: model:ir.model.fields,help:website_adds.field_product_pricelist_item_website_name
+msgid "Name for website selector"
+msgstr "Nombre para mostrar en el selector del sitio web"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Nombre"
+msgstr "Nombre"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Nombre Titular"
+msgstr "Nombre Titular"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Nombre del titular:"
+msgstr "Nombre del titular:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Nombre:"
+msgstr "Nombre:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Número"
+msgstr "Número"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Número de tarjeta:"
+msgstr "Número de tarjeta:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_order_form_rental_agreement
+msgid "Patient Info"
+msgstr "Información del paciente"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_patient_prescriber
+msgid "Prescriber"
+msgstr "Prescriptor/a"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Prescriptor/a"
+msgstr "Prescriptor/a"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Prescriptor/a:"
+msgstr "Prescriptor/a:"
+
+#. module: website_adds
+#: model:ir.model,name:website_adds.model_product_pricelist_item
+msgid "Pricelist item"
+msgstr "Elemento de la tarifa"
+
+#. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_payment
 msgid "Product"
 msgstr "Producto"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_quote_pricing
+#: model:ir.ui.view,arch_db:website_adds.website_sale_confirmation_add
+msgid "Products"
+msgstr "Productos"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Provincia"
+msgstr "Provincia"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Provincia:"
+msgstr "Provincia:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_order_form_rental_agreement
+msgid "Rental Agreement"
+msgstr "Rental Agreement"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Responsabilidad Financiera"
+msgstr "Responsabilidad Financiera"
 
 #. module: website_adds
 #: model:ir.model,name:website_adds.model_sale_order
@@ -167,25 +561,85 @@ msgid "Sales Order"
 msgstr "Pedido de venta"
 
 #. module: website_adds
-#: model:ir.ui.view,arch_db:website_adds.website_sale_product_price_adds
-msgid "Selecciona una fecha, por favor."
-msgstr "Selecciona una fecha, por favor."
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Semanas Alquiler:"
+msgstr "Semanas Alquiler:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Semanas de alquiler"
+msgstr "Semanas de alquiler"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_rental_signature_image
+msgid "Sign"
+msgstr "Firma"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_order_form_rental_agreement
+msgid "Sign Info"
+msgstr "Información Firma"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_rental_signer
+msgid "Signer"
+msgstr "Firmante"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+#: model:ir.ui.view,arch_db:website_adds.website_quote_pricing
 #: model:ir.ui.view,arch_db:website_adds.website_sale_confirmation_add
-msgid "Start / End Date"
-msgstr "Fecha Inicio / Fin"
-
-#. module: website_adds
-#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
-msgid "Start date"
+msgid "Start Date"
 msgstr "Fecha Inicio"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_payment
+msgid "Start date"
+msgstr "Fecha Inicio"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_patient_state_address
+msgid "State"
+msgstr "Estado"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_sale_order_patient_state_region_address
+msgid "State Region"
+msgstr "Municipio"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Su nombre:"
+msgstr "Su nombre:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_confirmation_add
+#: model:ir.ui.view,arch_db:website_adds.website_sale_payment
 msgid "Subtotal"
 msgstr "Subtotal"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Teléfono:"
+msgstr "Teléfono:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "Total Alquiler"
+msgstr "Total Alquiler"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+#: model:ir.ui.view,arch_db:website_adds.website_quote_pricing
+msgid "Total Price"
+msgstr "Precio total"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "Total alquiler:"
+msgstr "Alquiler Total:"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_footer_default_adds
@@ -203,364 +657,10 @@ msgid "Website"
 msgstr "Sitio web"
 
 #. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_revi_reviews_settings_domain
 #: model:ir.model.fields,field_description:website_adds.field_website_config_settings_domain
 msgid "Website Domain"
 msgstr "Dominio de la página web"
-
-#. module: website_adds
-#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
-msgid "Weeks"
-msgstr "Semanas"
-
-#. module: website_adds
-#: model:ir.ui.view,arch_db:website_adds.website_settings_add_instagam
-msgid "https://www.instagram.com/company_odoo"
-msgstr "https://www.instagram.com/company_odoo"
-
-#. module: website_adds
-#: model:ir.model,name:website_adds.model_website_config_settings
-msgid "website.config.settings"
-msgstr "website.config.settings"
-
-#. module: payment
-#: model:payment.acquirer,pre_msg:payment.payment_acquirer_transfer
-msgid "Transfer information will be provided after choosing the payment method."
-msgstr "La información de la transacción será provista después de seleccionar un método de pago."
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "(processing fees apply)"
-msgstr "(procesando cargos adicionales)"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "(processing fees\n"
-"                            apply)"
-msgstr "(procesando cargos\n"
-"                            adicionales)"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.update_displayed_shippings
-msgid "<i class=\"fa fa-plus-square\" aria-hidden=\"true\"/> Add an address"
-msgstr "<i class=\"fa fa-plus-square\" aria-hidden=\"true\"/> Añada una dirección"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "<span class=\"fa fa-2x fa-credit-card\"/>\n"
-"                                                Saved Cards"
-msgstr "<span class=\"fa fa-2x fa-credit-card\"/>\n"
-"                                                Trajetas guardadas"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "<span class=\"fa fa-2x fa-credit-card\"/>\n"
-"                        Saved Cards"
-msgstr "<span class=\"fa fa-2x fa-credit-card\"/>\n"
-"                        Trajetas guardadas"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "<span class=\"fa fa-arrow-right\"/>\n"
-"                      change"
-msgstr "<span class=\"fa fa-arrow-right\"/>\n"
-"                      cambiar"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "<span>Confirm </span><span class=\"fa fa-long-arrow-right\"/>"
-msgstr "<span>Confirmar </span><span class=\"fa fa-long-arrow-right\"/>"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.checkout_new_address_modal
-msgid "<span>Confirm</span>\n"
-"            <span class=\"fa fa-long-arrow-right\"/>"
-msgstr "<span>Confirmar</span>\n"
-"            <span class=\"fa fa-long-arrow-right\"/>"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
-msgid "Address"
-msgstr "Dirección"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
-msgid "Billing Address"
-msgstr "Dirección de Facturación"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
-msgid "Billing Information"
-msgstr "Información de Facturación"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
-#: code:addons/website_sale_one_step_checkout/controllers/main.py:0
-msgid "Shipping Address"
-msgstr "Dirección de Envío"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.view_website_config_settings_bd_inherit
-msgid "Checkout"
-msgstr "Checkout"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "City"
-msgstr "Ciudad"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Close"
-msgstr "Cerrar"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "Company Name"
-msgstr "Nombre Empresa"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Confirm Order <span class=\"fa fa-long-arrow-right\"/>"
-msgstr "Confirmación Pedido<span class=\"fa fa-long-arrow-right\"/>"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Confirm Order\n"
-"                          <span class=\"fa fa-long-arrow-right\"/>"
-msgstr "Confirmación Pedido\n"
-"                          <span class=\"fa fa-long-arrow-right\"/>"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "Country"
-msgstr "País"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "Country..."
-msgstr "País..."
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "Email"
-msgstr "Email"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Informationen"
-msgstr "Información"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "Name"
-msgstr "Nombre"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Pay Now\n"
-"                          <span class=\"fa fa-long-arrow-right\"/>"
-msgstr "Pagar Ahora\n"
-"                          <span class=\"fa fa-long-arrow-right\"/>"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Payment Method"
-msgstr "Método de Pago"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "Phone"
-msgstr "Teléfono"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Price"
-msgstr "Precio"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Product"
-msgstr "Producto"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Quantity"
-msgstr "Cantidad"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Review Order"
-msgstr "Revisar Pedido"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Save my payment data"
-msgstr "Guardar mis datos de pago"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.osc_onestepcheckout
-msgid "Shop - Checkout"
-msgstr "Tienda - Checkout"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
-msgid "Sign in"
-msgstr "Registrarse"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "State / Province"
-msgstr "Provincia"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "State / Province..."
-msgstr "Provincia"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "Street <span class=\"hidden-xs\"> and Number</span>"
-msgstr "Calle <span class=\"hidden-xs\"> y Número</span>"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "Street\n"
-"            <span class=\"hidden-xs\">and Number</span>"
-msgstr "Calle\n"
-"            <span class=\"hidden-xs\">y Número</span>"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "TIN / VAT"
-msgstr "IVA"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.model.fields,field_description:website_sale_one_step_checkout.field_website_config_settings_use_osc
-#: model:ir.model.fields,field_description:website_sale_one_step_checkout.field_website_use_osc
-msgid "Use OSC"
-msgstr "Usar OSC (Checkout en un paso)"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.model,name:website_sale_one_step_checkout.model_website
-msgid "Website"
-msgstr "Sitio Web"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address_form
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.public_shipping_form
-msgid "Zip Code"
-msgstr "Cod. Postal"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
-msgid "or"
-msgstr "o"
-
-#. module: website_sale_one_step_checkout_delivery
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout_delivery.payment_delivery
-msgid "Delivery Method"
-msgstr "Método de Envío"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
-msgid "<span/>\n"
-"                        Ship to this address"
-msgstr "<span/>\n"
-"                        Enviar a esta dirección"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
-msgid "<span/>\n"
-"                      Checkout as guest"
-msgstr "<span/>\n"
-"                      Comprar como invitado"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
-msgid "<span/>\n"
-"                      I already have an\n"
-"                      Account"
-msgstr "<span/>\n"
-"                      Ya tengo una\n"
-"                      cuenta"
-
-#. module: website_sale_one_step_checkout
-#: model:ir.ui.view,arch_db:website_sale_one_step_checkout.address
-msgid "<i class=\"fa fa-plus-square\" aria-hidden=\"true\"/>\n"
-"                  Add an address"
-msgstr "<i class=\"fa fa-plus-square\" aria-hidden=\"true\"/>\n"
-"                  Añadir una dirección"
-
-#. module: payment_redsys
-#: model:ir.ui.view,arch_db:payment_redsys.order
-msgid "<i class=\"fa fa-file-pdf-o\"/> Order"
-msgstr "<i class=\"fa fa-file-pdf-o\"/> Pedido"
-
-
-#. module: payment_redsys
-#: model:payment.acquirer,cancel_msg:payment_redsys.payment_acquirer_redsys
-msgid "<i><font style=\"font-size: 14px;\">Cancel, Your payment has been cancelled.</font></i>"
-msgstr "<i><font style=\"font-size: 14px;\">Cancelado, su pago ha sido cancelado.</font></i>"
-
-#. module: payment_redsys
-#: model:payment.acquirer,done_msg:payment_redsys.payment_acquirer_redsys
-msgid "<i><font style=\"font-size: 14px;\">Done, Your online payment has been successfully processed. Thank you for your order.</font></i>"
-msgstr "<i><font style=\"font-size: 14px;\">Hacho, su pago ha sido realizado correctamente. Gracias por su pedido.</font></i>"
-
-#. module: payment_redsys
-#: model:payment.acquirer,error_msg:payment_redsys.payment_acquirer_redsys
-msgid "<i><font style=\"font-size: 14px;\">Error, Please be aware that an error occurred during the transaction. The order has been confirmed but will not be paid. Do not hesitate to contact us if you have any questions on the status of your order.</font></i>"
-msgstr "<i><font style=\"font-size: 14px;\">Error, ha ocurrido un error durante la transacción. El pedido ha sido confirmado pero no ha sido pagado. No dude en ponerse en contacto con nosotros para saber el estado de su pedido.</font></i>"
-
-#. module: payment_redsys
-#: model:payment.acquirer,pending_msg:payment_redsys.payment_acquirer_redsys
-msgid "<i><font style=\"font-size: 14px;\">Pending, Your online payment has been successfully processed. But your order is not validated yet.</font></i>"
-msgstr "<i><font style=\"font-size: 14px;\">Pendiente, su pago ha sido realizado correctmente pero su pedido todavía no ha sido validado.</font></i>"
-
-#. module: payment_redsys
-#: model:ir.ui.view,arch_db:payment_redsys.order
-msgid "<strong>Discount (%)</strong>"
-msgstr "<strong>Descuento (%)</strong>"
-
-#. module: payment_redsys
-#: model:ir.ui.view,arch_db:payment_redsys.redsys_result_ko
-msgid "En error ocurred. <br/>Please contact with us and inform you about your order."
-msgstr "Ha ocurrido un error. <br/>Por favor, contacte con nosotros y le informaremos sobre su pedido."
-
-#. module: payment_redsys
-#: code:addons/payment_redsys/models/redsys.py:330
-#, python-format
-msgid "Redsys: feedback error %s (%s)"
-msgstr "Redsys: información error %s (%s)"
-
-#. module: payment_redsys
-#: model:ir.ui.view,arch_db:payment_redsys.redsys_result_ok
-msgid "Thanks for you order. <br/>We will inform you of your order status"
-msgstr "Gracias por su pedido. <br/>Le informaremos sobre el estado de su pedido"
-
-#. module: payment_redsys
-#: model:payment.acquirer,pre_msg:payment_redsys.payment_acquirer_redsys
-msgid "You will be redirected to the Redsys payment gateway after clicking on the payment button."
-msgstr "Será redireccionado a la plataforma de pago Redsys después de pulsar el botón de pago."
-
-#. module: website_adds
-#: model:ir.model.fields,field_description:website_adds.field_product_pricelist_item_website_name
-msgid "Website Selector Name"
-msgstr "Nombre Selector Sitio Web"
 
 #. module: website_adds
 #: model:ir.model.fields,field_description:website_adds.field_product_pricelist_item_selectable
@@ -568,20 +668,41 @@ msgid "Website Selectable"
 msgstr "Seleccionable en Sitio web"
 
 #. module: website_adds
-#: model:ir.model.fields,help:website_adds.field_product_pricelist_item_website_name
-msgid "Name for website selector"
-msgstr "Nombre para mostrar en el selector del sitio web"
+#: model:ir.model.fields,field_description:website_adds.field_product_pricelist_item_website_name
+msgid "Website Selector Name"
+msgstr "Nombre Selector Sitio Web"
 
 #. module: website_adds
-#: model:ir.model.fields,help:website_adds.field_product_pricelist_item_selectable
-msgid "If checked, it will be selectable into the website selector."
-msgstr "Si está seleccionado, será visible en el selector del sitio web."
+#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_adds
+msgid "Weeks"
+msgstr "Semanas"
 
 #. module: website_adds
-#: model:ir.ui.view,arch_db:website_adds.website_sale_cart_one_column
-msgid "<span class=\"fa fa-long-arrow-left\"/>\n"
-"                    <span class=\"hidden-xs\">Continue Shopping</span>\n"
-"                    <span class=\"visible-xs-inline\">Continue</span>"
-msgstr "<span class=\"fa fa-long-arrow-left\"/>\n"
-"                    <span class=\"hidden-xs\">Continuar Comprando</span>\n"
-"                    <span class=\"visible-xs-inline\">Continuar</span>"
+#: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
+msgid "XXXX XXXX XXXX XXXX"
+msgstr "XXXX XXXX XXXX XXXX"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_order_form_rental_agreement
+msgid "contact:"
+msgstr "contact:"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.sale_report_saleorder_document_add
+msgid "el"
+msgstr "el"
+
+#. module: website_adds
+#: model:ir.ui.view,arch_db:website_adds.website_settings_add_instagam
+msgid "https://www.instagram.com/company_odoo"
+msgstr "https://www.instagram.com/company_odoo"
+
+#. module: website_adds
+#: model:ir.model.fields,field_description:website_adds.field_revi_reviews_settings_website_id
+msgid "website"
+msgstr "sitio web"
+
+#. module: website_adds
+#: model:ir.model,name:website_adds.model_website_config_settings
+msgid "website.config.settings"
+msgstr "website.config.settings"

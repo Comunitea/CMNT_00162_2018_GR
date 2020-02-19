@@ -1,10 +1,13 @@
 # -*- coding: utf-8 -*-
 
+import json
+
 from odoo import http
 
 from odoo.http import request
 
 from odoo.addons.website_sale.controllers.main import WebsiteSale
+from odoo.addons.website_mail.controllers.main import _message_post_helper
 
 
 class NewUpdateCart(WebsiteSale):
@@ -29,3 +32,18 @@ class NewUpdateCart(WebsiteSale):
         request.env.context = values
         return super(NewUpdateCart, self).cart_update(product_id, add_qty=add_qty, set_qty=set_qty, **kw)
 
+
+class SaleOrder(http.Controller):
+
+    @http.route(['/order/rental_agreement'], type='json', auth="public", website=True)
+    def accept(self, order_id, signer=None, sign=None, **post):
+        """
+        Gets sign data from web form, saves them to the order and send message with them.
+        """
+        Order = request.env['sale.order'].sudo().browse(order_id)
+        Order.rental_signer = signer
+        Order.rental_signature_image = json.loads(sign.decode())
+        attachments = [('signature.png', sign.decode('base64'))] if sign else []
+        _message_post_helper(message=Order.rental_signer, res_id=order_id, res_model='sale.order',
+                             attachments=attachments)
+        return True
