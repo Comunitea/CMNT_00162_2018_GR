@@ -548,7 +548,7 @@ msgstr "Provincia:"
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.sale_order_form_rental_agreement
 msgid "Rental Agreement"
-msgstr "Rental Agreement"
+msgstr "Acuerdo de Alquiler"
 
 #. module: website_adds
 #: model:ir.ui.view,arch_db:website_adds.website_sale_extra_info
