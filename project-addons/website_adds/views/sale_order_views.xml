@@ -31,6 +31,7 @@
                     <group>
                         <group name="patient_info" string="Patient Info">
                             <field name="patient_name"/>
+                            <field name="patient_dni"/>
                             <field name="patient_mail"/>
                             <field name="patient_mobile"/>
                             <field name="patient_street_address"/>
