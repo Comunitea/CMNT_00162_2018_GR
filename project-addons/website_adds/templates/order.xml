@@ -215,8 +215,8 @@
                     <p><strong>Provincia: </strong><span t-esc="doc.patient_state_address or doc.partner_id.state_id.name"/></p>
                     <p><strong>Municipio: </strong><span t-esc="doc.patient_state_region_address or doc.partner_id.city"/></p>
                     <p><strong>Código Postal: </strong><span t-esc="doc.patient_zip_address or doc.partner_id.zip"/></p>
-                    <p><strong>Fecha de nacimiento: </strong><span t-field="doc.patient_birth_date" t-options="{'widget': 'date'}"/></p>
-                    <p><strong>Prescriptor/a: </strong><span t-field="doc.patient_prescriber"/></p>
+<!--                    <p><strong>Fecha de nacimiento: </strong><span t-field="doc.patient_birth_date" t-options="{'widget': 'date'}"/></p>-->
+<!--                    <p><strong>Prescriptor/a: </strong><span t-field="doc.patient_prescriber"/></p>-->
 
                     <h3 class="mt32"><strong>Información del Alquiler</strong></h3>
                     <p><strong>Semanas Alquiler: </strong><span t-esc="int(line.product_uom_qty)"/></p>

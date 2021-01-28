@@ -190,24 +190,24 @@
                                    t-att-value="website_sale_order.patient_zip_address or website_sale_order.partner_id.zip or ''" maxlength="5"/>
                         </div>
                     </div>
-                    <div class="form-group form-field o_website_form_custom">
-                        <div class="col-md-3 col-sm-4 col-xs-3 text-right">
-                            <label class="control-label" for="patient_birth_date">Fecha de nacimiento</label>
-                        </div>
-                        <div class="col-md-7 col-sm-8 col-xs-7">
-                            <input type="text" class="form-control o_website_form_input o_website_form_date" name="patient_birth_date"
-                                   t-att-value="website_sale_order.patient_birth_date and time.strftime('%d/%m/%Y', time.strptime(website_sale_order.patient_birth_date,'%Y-%m-%d')) or ''"/>
-                        </div>
-                    </div>
-                    <div class="form-group form-field o_website_form_custom">
-                        <div class="col-md-3 col-sm-4 col-xs-3 text-right">
-                            <label class="control-label" for="patient_prescriber">Prescriptor/a</label>
-                        </div>
-                        <div class="col-md-7 col-sm-8 col-xs-7">
-                            <input type="text" class="form-control o_website_form_input" name="patient_prescriber"
-                                   t-att-value="website_sale_order.patient_prescriber or ''"/>
-                        </div>
-                    </div>
+<!--                    <div class="form-group form-field o_website_form_custom">-->
+<!--                        <div class="col-md-3 col-sm-4 col-xs-3 text-right">-->
+<!--                            <label class="control-label" for="patient_birth_date">Fecha de nacimiento</label>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-7 col-sm-8 col-xs-7">-->
+<!--                            <input type="text" class="form-control o_website_form_input o_website_form_date" name="patient_birth_date"-->
+<!--                                   t-att-value="website_sale_order.patient_birth_date and time.strftime('%d/%m/%Y', time.strptime(website_sale_order.patient_birth_date,'%Y-%m-%d')) or ''"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group form-field o_website_form_custom">-->
+<!--                        <div class="col-md-3 col-sm-4 col-xs-3 text-right">-->
+<!--                            <label class="control-label" for="patient_prescriber">Prescriptor/a</label>-->
+<!--                        </div>-->
+<!--                        <div class="col-md-7 col-sm-8 col-xs-7">-->
+<!--                            <input type="text" class="form-control o_website_form_input" name="patient_prescriber"-->
+<!--                                   t-att-value="website_sale_order.patient_prescriber or ''"/>-->
+<!--                        </div>-->
+<!--                    </div>-->
 
                     <div class="row">
                         <div class="col-md-3 col-sm-4 col-xs-3 text-right">
