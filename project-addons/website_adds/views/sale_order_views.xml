@@ -38,8 +38,8 @@
                             <field name="patient_state_address"/>
                             <field name="patient_state_region_address"/>
                             <field name="patient_zip_address"/>
-                            <field name="patient_birth_date"/>
-                            <field name="patient_prescriber"/>
+<!--                            <field name="patient_birth_date"/>-->
+<!--                            <field name="patient_prescriber"/>-->
                         </group>
                         <group name="sign_info" string="Sign Info">
                             <field name="rental_signer"/>
