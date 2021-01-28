@@ -122,7 +122,7 @@
                         </div>
                         <div class="col-md-7 col-sm-8 col-xs-7 col-xs-7">
                             <input type="text" class="form-control o_website_form_input" name="patient_name" required="1"
-                                   t-att-value="website_sale_order.patient_name or request.env.user.name or request.env.user.partner_id.name or ''"/>
+                                   t-att-value="website_sale_order.patient_name or website_sale_order.partner_id.name or ''"/>
                         </div>
                     </div>
                     <div class="form-group form-field o_website_form_required">
@@ -131,7 +131,7 @@
                         </div>
                         <div class="col-md-7 col-sm-8 col-xs-7 col-xs-7">
                             <input type="text" class="form-control o_website_form_input" name="patient_dni" required="1" maxlength="9"
-                                   t-att-value="website_sale_order.patient_dni or ''" placeholder="Formato: 12345678A"/>
+                                   t-att-value="website_sale_order.patient_dni or website_sale_order.partner_id.vat or ''"/>
                         </div>
                     </div>
                     <div class="form-group form-field">
@@ -140,7 +140,7 @@
                         </div>
                         <div class="col-md-7 col-sm-8 col-xs-7">
                             <input type="email" class="form-control o_website_form_input" name="patient_mail"
-                                   t-att-value="website_sale_order.patient_mail or request.env.user.partner_id.email or ''"
+                                   t-att-value="website_sale_order.patient_mail or website_sale_order.partner_id.email or ''"
                                    placeholder="Formato: un_nombre@proveedor.dominio"/>
                         </div>
                     </div>
@@ -150,7 +150,7 @@
                         </div>
                         <div class="col-md-7 col-sm-8 col-xs-7">
                             <input type="text" class="form-control o_website_form_input" name="patient_mobile" required="1" maxlength="9"
-                                   t-att-value="website_sale_order.patient_mobile or request.env.user.partner_id.mobile or ''"
+                                   t-att-value="website_sale_order.patient_mobile or website_sale_order.partner_id.mobile or ''"
                                    placeholder="Formato: 671466427"/>
                         </div>
                     </div>
@@ -160,7 +160,7 @@
                         </div>
                         <div class="col-md-7 col-sm-8 col-xs-7">
                             <input type="text" class="form-control o_website_form_input" name="patient_street_address" required="1"
-                                   t-att-value="website_sale_order.patient_street_address or website_sale_order.partner_shipping_id.street or request.env.user.partner_id.street or ''"/>
+                                   t-att-value="website_sale_order.patient_street_address or website_sale_order.partner_id.street or website_sale_order.partner_id.street2 or ''"/>
                         </div>
                     </div>
                     <div class="form-group form-field o_website_form_required">
@@ -169,7 +169,7 @@
                         </div>
                         <div class="col-md-7 col-sm-8 col-xs-7">
                             <input type="text" class="form-control o_website_form_input" name="patient_state_address" required="1"
-                                   t-att-value="website_sale_order.patient_state_address or website_sale_order.partner_shipping_id.city or request.env.user.partner_id.city or ''"/>
+                                   t-att-value="website_sale_order.patient_state_address or website_sale_order.partner_id.city or ''"/>
                         </div>
                     </div>
                     <div class="form-group form-field o_website_form_custom">
@@ -178,7 +178,7 @@
                         </div>
                         <div class="col-md-7 col-sm-8 col-xs-7">
                             <input type="text" class="form-control o_website_form_input" name="patient_state_region_address"
-                                   t-att-value="website_sale_order.patient_state_region_address or website_sale_order.partner_shipping_id.state_id.name or request.env.user.partner_id.state_id.name or ''"/>
+                                   t-att-value="website_sale_order.patient_state_region_address or website_sale_order.partner_id.state_id.name or ''"/>
                         </div>
                     </div>
                     <div class="form-group form-field o_website_form_required_custom">
@@ -187,7 +187,7 @@
                         </div>
                         <div class="col-md-7 col-sm-8 col-xs-7">
                             <input type="number" class="form-control o_website_form_input" name="patient_zip_address" required="1"
-                                   t-att-value="website_sale_order.patient_zip_address or request.env.user.partner_id.zip or ''" maxlength="5"/>
+                                   t-att-value="website_sale_order.patient_zip_address or website_sale_order.partner_id.zip or ''" maxlength="5"/>
                         </div>
                     </div>
                     <div class="form-group form-field o_website_form_custom">

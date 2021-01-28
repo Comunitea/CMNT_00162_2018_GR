@@ -168,7 +168,8 @@
                 <th colspan="3">Descripción</th>
                 <th class="text-right">Fecha Inicio</th>
                 <th class="text-right">Fecha Fin</th>
-                <th/>
+                <th t-if="not display_discount"/>
+                <th t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">Dto (%)</th>
                 <th class="text-right price_tax_included" groups="sale.group_show_price_total">Precio Total</th>
             </tr>
         </xpath>
@@ -186,7 +187,10 @@
                     <td class="text-right" t-if="l.end_date">
                         <span t-field="l.end_date" t-options="{'widget': 'date'}"/>
                     </td>
-                    <td/>
+                    <td t-if="not display_discount"/>
+                    <td t-if="display_discount" class="text-right" groups="sale.group_discount_per_so_line">
+                        <span t-field="l.discount"/>
+                    </td>
                     <td class="text-right" groups="sale.group_show_price_total">
                         <span t-field="l.price_total"
                               t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/>
@@ -203,19 +207,19 @@
                     <h1 class="text-center mt0"><strong>Acuerdo de Alquiler</strong></h1>
 
                     <h3 class="mt32"><strong>Información del Paciente</strong></h3>
-                    <p><strong>Nombre: </strong><span t-field="doc.patient_name"/></p>
-                    <p><strong>DNI: </strong><span t-field="doc.patient_dni"/></p>
-                    <p><strong>Email: </strong><span t-esc="doc.patient_mail"/></p>
-                    <p><strong>Teléfono: </strong><span t-field="doc.patient_mobile"/></p>
-                    <p><strong>Dirección: </strong><span t-field="doc.patient_street_address"/></p>
-                    <p><strong>Provincia: </strong><span t-field="doc.patient_state_address"/></p>
-                    <p><strong>Municipio: </strong><span t-esc="doc.patient_state_region_address"/></p>
-                    <p><strong>Código Postal: </strong><span t-field="doc.patient_zip_address"/></p>
+                    <p><strong>Nombre: </strong><span t-esc="doc.patient_name or doc.partner_id.name"/></p>
+                    <p><strong>DNI: </strong><span t-esc="doc.patient_dni or doc.partner_id.vat"/></p>
+                    <p><strong>Email: </strong><span t-esc="doc.patient_mail or doc.partner_id.email"/></p>
+                    <p><strong>Teléfono: </strong><span t-esc="doc.patient_mobile or doc.partner_id.mobile or doc.partner_id.phone"/></p>
+                    <p><strong>Dirección: </strong><span t-esc="doc.patient_street_address or doc.partner_id.street2 or doc.partner_id.street"/></p>
+                    <p><strong>Provincia: </strong><span t-esc="doc.patient_state_address or doc.partner_id.state_id.name"/></p>
+                    <p><strong>Municipio: </strong><span t-esc="doc.patient_state_region_address or doc.partner_id.city"/></p>
+                    <p><strong>Código Postal: </strong><span t-esc="doc.patient_zip_address or doc.partner_id.zip"/></p>
                     <p><strong>Fecha de nacimiento: </strong><span t-field="doc.patient_birth_date" t-options="{'widget': 'date'}"/></p>
                     <p><strong>Prescriptor/a: </strong><span t-field="doc.patient_prescriber"/></p>
 
                     <h3 class="mt32"><strong>Información del Alquiler</strong></h3>
-                    <p><strong>Semanas Alquiler: </strong><span t-field="line.number_of_days"/></p>
+                    <p><strong>Semanas Alquiler: </strong><span t-esc="int(line.product_uom_qty)"/></p>
                     <p><strong>Total alquiler: </strong><span t-field="doc.amount_total" t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'/></p>
                     <p><strong>Fecha Comienzo: </strong><span t-field="line.start_date" t-options="{'widget': 'date'}"/></p>
                     <p><strong>Fecha Finalización: </strong><span t-field="line.end_date" t-options="{'widget': 'date'}"/></p>
